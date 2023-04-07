@@ -10,18 +10,20 @@ pub enum Route {
     About,
     #[at("/map")]
     Map, 
-    #[at("/academic_books")]
+    #[at("/book/academic")]
     Academic, 
-    #[at("/classical_books")]
+    #[at("/books/classical")]
     Classical, 
-    #[at("/history_books")]
+    #[at("/books/history")]
     Historybooks, 
-    #[at("/literature_books")]
+    #[at("/books/literature")]
     Literature, 
-    #[at("/philosophy_books")]
+    #[at("/books/philosophy")]
     Philosophy, 
-    #[at("/religion_books")]
+    #[at("/books/politics")]
+    Politics, 
+    #[at("/books/religion")]
     Religion, 
-    #[at("/scififantasy_books")]
+    #[at("/books/scififantasy")]
     Scififantasy  
 }

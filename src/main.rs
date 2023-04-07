@@ -9,13 +9,14 @@ use yew_page::pages::home::Home;
 use yew_page::pages::links::Links;
 use yew_page::pages::about::About;
 use yew_page::pages::map::Map;
-use yew_page::books::academic::Academic;
-use yew_page::books::classical::Classical;
-use yew_page::books::historybooks::Historybooks;
-use yew_page::books::literature::Literature;
-use yew_page::books::philosophy::Philosophy;
-use yew_page::books::religion::Religion;
-use yew_page::books::scififantasy::Scififantasy;
+use yew_page::pages::books::academic::Academic;
+use yew_page::pages::books::classical::Classical;
+use yew_page::pages::books::historybooks::Historybooks;
+use yew_page::pages::books::literature::Literature;
+use yew_page::pages::books::philosophy::Philosophy;
+use yew_page::pages::books::politics::Politics;
+use yew_page::pages::books::religion::Religion;
+use yew_page::pages::books::scififantasy::Scififantasy;
 
 use yew_page::routes::routes::Route;
 
@@ -45,6 +46,7 @@ fn switch(routes: Route) -> Html {
         Route::Historybooks => html! { < Historybooks /> },
         Route::Literature => html! { < Literature /> },
         Route::Philosophy => html! { < Philosophy /> },
+        Route::Politics => html! { < Politics /> },
         Route::Religion => html! { < Religion /> },
         Route::Scififantasy => html! { < Scififantasy /> }
     }

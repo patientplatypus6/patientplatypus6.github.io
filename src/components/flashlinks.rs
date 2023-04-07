@@ -357,6 +357,7 @@ impl Component for Flashlinks {
 
         "}
         </style>
+
         <div class="learnmorecontainer">
           {
             if self.open_modal{
@@ -434,29 +435,39 @@ impl Component for Flashlinks {
                 </Link<Route>>
               </div>
               <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
-                <img src={"static/buttons/literature.png"}
-                  style="width: 100%; height: 100%;"
-                />
+                <Link<Route> to={Route::Literature}>
+                  <img src={"static/buttons/literature.png"}
+                    style="width: 100%; height: 100%;"
+                  />
+                </Link<Route>>
               </div>
               <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
-                <img src={"static/buttons/history.png"}
-                  style="width: 100%; height: 100%;"
-                />
+                <Link<Route> to={Route::Historybooks}>
+                  <img src={"static/buttons/history.png"}
+                    style="width: 100%; height: 100%;"
+                  />
+                </Link<Route>>
               </div>
               <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
-                <img src={"static/buttons/philosophy.png"}
-                  style="width: 100%; height: 100%;"
-                />
+                <Link<Route> to={Route::Philosophy}>
+                  <img src={"static/buttons/philosophy.png"}
+                    style="width: 100%; height: 100%;"
+                  />
+                </Link<Route>>
               </div>
               <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
-                <img src={"static/buttons/politics.png"}
-                  style="width: 100%; height: 100%;"
-                />
+                <Link<Route> to={Route::Politics}>
+                  <img src={"static/buttons/politics.png"}
+                    style="width: 100%; height: 100%;"
+                  />
+                </Link<Route>>
               </div>
               <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
-                <img src={"static/buttons/religion.png"}
-                  style="width: 100%; height: 100%;"
-                />
+                <Link<Route> to={Route::Religion}>
+                  <img src={"static/buttons/religion.png"}
+                    style="width: 100%; height: 100%;"
+                  />
+                </Link<Route>>
               </div>
               <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
                 <Link<Route> to={Route::Academic}>
