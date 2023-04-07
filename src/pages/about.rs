@@ -314,21 +314,28 @@ impl Component for About {
               <div class="timeheader">
                 {"This is the about page. This is about me."}
               </div>    
-              <p>
-                {"My name is Peter Teller Weyand. I'm 37, I'm near sighted, have bad teeth and I'm homeless. I'm of slightly above average intelligence and slightly below average looks. I'm 6 feet tall when I don't slouch. I've been abandoned by all my friends and family because I couln't find a job. I asked my sister if I could put up a tent in her yard until I could find a job and she paid me $300 to go away. My father says he wished I would die of the plague."}
-              </p>
-              <p>
-                {"My father once told me that Weyands don't lie, cheat or steal. So I don't. It's kept me in good stead - it means that I have kept my self respect enough to go tell the rest of you dog fuckers that you suck. The people in the Tenderloin think this makes me either a policeman or a priest. Because when I think open mindedness and expansive world view I think the Tenderloin in San Francisco."}
-              </p>
-              <p>
-                {"Oh. By the way. I have used generative AI art throughout this piece without attribution and will continue to do so! If you can prove that you own the rights to the works that created the content that your AI algorithm created, then I will take down this art. Or if you can prove that your use of AI is novel art, and somehow my repurposing of your work is NOT novel art, then I will be happy to take down the images and replace them. Otherwise go fuck yourself."}
-              </p>
-              <p>
-                {"I'm not going to post my resume, because none of you dog fuckers would hire me. And if you did I doubt you'd be able to keep in business for 6 months as the economy goes down in flames. I won't post a picture because I'm not a whore and how I look shouldn't matter. You've passed me on the street and kept on walking. I won't post a link to social media, because social media is a symptom of a much larger disease."}
-              </p>
-              <p>
-                {"This is my email. peterweyand0@gmail.com. If you have something to say type it out and push send. Otherwise suck your own dick. Yoga is your friend."}
-              </p>
+              <div style="height: 35vh; float: left; margin: 5px; margin-bottom: 10px;">
+                <img style="height: 100%;" loading="lazy" src="static/suave.png"/>
+                <br/>
+                <div style="text-decoration: italic; background: rgba(0,0,0,0.2); text-align: center; font-size: 0.8rem; font-weight: bold; padding: 2px;">{"one suave motherfucker"}</div>
+              </div>
+              <div style="float: none;">
+                <p>
+                  {"My name is Peter Teller Weyand. I'm 37, I'm near sighted, have bad teeth and I'm homeless. I'm of slightly above average intelligence and slightly below average looks. I'm 6 feet tall when I don't slouch. I've been abandoned by all my friends and family because I couln't find a job. I asked my sister if I could put up a tent in her yard until I could find a job and she paid me $300 to go away. My father says he wished I would die of the plague."}
+                </p>
+                <p>
+                  {"My father once told me that Weyands don't lie, cheat or steal. So I don't. It's kept me in good stead - it means that I have kept my self respect enough to go tell the rest of you dog fuckers that you suck. The people in the Tenderloin think this makes me either a policeman or a priest. Because when I think open mindedness and expansive world view I think the Tenderloin in San Francisco."}
+                </p>
+                <p>
+                  {"Oh. By the way. I have used generative AI art throughout this piece without attribution and will continue to do so! If you can prove that you own the rights to the works that created the content that your AI algorithm created, then I will take down this art. Or if you can prove that your use of AI is novel art, and somehow my repurposing of your work is NOT novel art, then I will be happy to take down the images and replace them. Otherwise go fuck yourself."}
+                </p>
+                <p>
+                  {"I'm not going to post my resume, because none of you dog fuckers would hire me. And if you did I doubt you'd be able to keep in business for 6 months as the economy goes down in flames. I won't post a picture because I'm not a whore and how I look shouldn't matter. (Ah fuck it - I posted a picture. Goddamn am I handsome. I'd fuck me. Oh wait.) You've passed me on the street and kept on walking. I won't post a link to social media, because social media is a symptom of a much larger disease."}
+                </p>
+                <p>
+                  {"This is my email. peterweyand0@gmail.com. If you have something to say type it out and push send. Otherwise suck your own dick. Yoga is your friend."}
+                </p>
+              </div>
             </div>
           </div>
         </div>
