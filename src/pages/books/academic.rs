@@ -23,10 +23,12 @@ use crate::routes::routes::Route;
 use yew_router::prelude::*;
 
 use super::super::super::components::flashlinksbooks::Flashlinks;
-
+use super::super::super::util::books;
+use super::super::super::util::books::BookIDS;
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Academic{
+  books: Vec<BookIDS> 
 }
 
 pub enum Msg {
@@ -38,7 +40,9 @@ impl Component for Academic {
 
 
   fn create(ctx: &Context<Self>) -> Self {
-    Self{}
+    Self{
+      books: books::bookidshandler(), 
+    }
   }
 
   fn rendered(&mut self, ctx: &Context<Self>, first_render: bool) {
@@ -316,11 +320,36 @@ impl Component for Academic {
               </div>    
               <div>
                 <p>
-                  {"Here's a link to some academic books - "}
+                  {"Here's links to some academic books - "}
                 </p>
               </div>
               <div>
-                <img loading="lazy" src={"https://drive.google.com/uc?export=view&id=1HfdwocDxllAkBCQLFHQhyD5sj1ywIeRy"}/>
+                {
+                  for self.books.iter().enumerate().map(|(index, note)| {
+                    if note.kind == "Academic".to_string(){
+                      html!{
+                        <div key={index}>
+                          <a href={format!("https://drive.google.com/file/d/{}/view", note.clone().bookid)}>
+                            <div style="display: inline-block; width: 10vw;">
+                              <img 
+                                loading="lazy" 
+                                style="display: inline-block; width: 100%;"
+                                src={format!("https://drive.google.com/uc?export=view&id={}", note.clone().bookid)}
+                              /> 
+                              <div style="text-decoration: italic; background: rgba(0,0,0,0.2); text-align: center; font-size: 0.8rem; font-weight: bold; padding: 2px; width: calc(100% - 4px); display: inline-block;">
+                                {note.clone().chartdesc.to_string()}
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      }
+                    }else{
+                      html!{
+                        <div/>
+                      }
+                    }
+                  })
+                }
               </div>
             </div>
           </div>

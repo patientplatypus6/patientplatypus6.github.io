@@ -23,9 +23,12 @@ use crate::routes::routes::Route;
 use yew_router::prelude::*;
 
 use super::super::super::components::flashlinksbooks::Flashlinks;
+use super::super::super::util::books;
+use super::super::super::util::books::BookIDS;
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Philosophy{
+  books: Vec<BookIDS> 
 }
 
 pub enum Msg {
@@ -37,7 +40,9 @@ impl Component for Philosophy {
 
 
   fn create(ctx: &Context<Self>) -> Self {
-    Self{}
+    Self{
+      books: books::bookidshandler(), 
+    }
   }
 
   fn rendered(&mut self, ctx: &Context<Self>, first_render: bool) {
@@ -311,57 +316,41 @@ impl Component for Philosophy {
             </h1>      
             <div>
               <div class="timeheader">
-                {"Places to go, things to be"}
+                {"Philosophy Books"}
               </div>    
               <div>
                 <p>
-                  {"Here's a shit unordered list of the links I've used so far. I'll unfuck this later. Enjoy!"}
+                  {"Here's some links to philosophy books"}
                 </p>
               </div>
-              <ul>  
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=e2CliA8PuRM&ab_channel=BronxRadioLab"}>{"religion"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.lingscars.com/"}>{"as this asshole"}</a>
-                </li>
-                <li>
-                  <a href={"https://news.ycombinator.com"}>{"news aggregation website"}</a>
-                </li>
-                <li>
-                  <a href={"https://ohadravid.github.io/posts/2023-03-rusty-python/"}>{"this guy"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.vanityfair.com/news/2017/06/neal-stephenson-metaverse-snow-crash-silicon-valley-virtual-reality"}>{"In the future we are all gargoyles"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.gamespot.com/articles/saints-row-iv-developers-respond-to-dildo-weapon-criticisms/1100-6412418/"}>{"beat someone to death with a dildo"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.polarsignals.com/blog/posts/2023/03/28/how-to-read-icicle-and-flame-graphs/"}>{"flame charts"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.wired.com/story/brandon-sanderson-is-your-god/"}>{"dipshit with a sword"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=5VtDM5jicRQ"}>{"today was a good day"}</a>
-                </li>
-                <li>
-                  <a href={"https://sfgov.org/mod/sites/default/files/FileCenter/Documents/2176-Sidewalk%20Landscape%20with%20SIRP.pdf"}>{"According to Article 15, Section 706 of the Public Works Code"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=9nWAic0lHVI&embeds_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_origin=https%3A%2F%2Fwww.bing.com&feature=emb_logo&ab_channel=CNN"}>{"this guy"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=3L4YrGaR8E4&ab_channel=RATMVEVO"}>{"Bulls on Parade"}</a>
-                </li>
-                <li>
-                  <a href={"https://wilwheaton.net/2023/03/the-library-is-a-safe-place/"}>{"That guy from Star Trek"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=7Pq-S557XQU&ab_channel=CGPGrey"}>{"Humans Need Not Apply"}</a>
-                </li>
-              </ul>
+              <div>
+                {
+                  for self.books.iter().enumerate().map(|(index, note)| {
+                    if note.kind == "Philosophy".to_string(){
+                      html!{
+                        <div key={index}>
+                          <a href={format!("https://drive.google.com/file/d/{}/view", note.clone().bookid)}>
+                            <div style="display: inline-block; width: 10vw;">
+                              <img 
+                                loading="lazy" 
+                                style="display: inline-block; width: 100%;"
+                                src={format!("https://drive.google.com/uc?export=view&id={}", note.clone().bookid)}
+                              /> 
+                              <div style="text-decoration: italic; background: rgba(0,0,0,0.2); text-align: center; font-size: 0.8rem; font-weight: bold; padding: 2px; width: calc(100% - 4px); display: inline-block;">
+                                {note.clone().chartdesc.to_string()}
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      }
+                    }else{
+                      html!{
+                        <div/>
+                      }
+                    }
+                  })
+                }
+              </div>
             </div>
           </div>
         </div>
