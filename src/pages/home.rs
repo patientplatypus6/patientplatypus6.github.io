@@ -379,6 +379,83 @@ impl Component for Home {
 
             <div>
               <div class="timeheader">
+                {"Sat April 8 7:50AM San Francisco - The Time is Now"}
+              </div>
+              <div>
+                <p>
+                  {"My father once told me this joke. An old man is in the hospital on life support and the weirdest thing keeps happening. He seems to be getting better, and without fail, every Friday his vitals drop. The doctors don't know what's going on - everyone is wondering what's happening. Finally, one of the relatives comes in on a Thursday night and she sees the janitor unplugging the life support machine so he has an outlet for the floor buffer."}
+                </p>
+                <p>
+                  {"People have kept speculating how the COVID-19 pandemic started in China. Some say it was a government conspiracy by the Chinese to intentionally leak the virus. Some say it came from Pangolins at the local, lightly regulated, food markets. Me? I think that the Chinese version of Consuela - let's call her XieXie just to put a name to the face - unplugged a freezer she shouldn't have at the Wuhan Virology Lab so she could power her Autowaxer 3000."}
+                </p>  
+                <p>
+                  {"Big joke. Everybody laugh. It would just be like the world to have such a colossal fuck up from such a simple mistake. I have a feeling that there's an office somewhere in Langley with two G-men wearing bad suits in a hushed office looking across each other across a desk and saying - 'We can't tell anybody.' 'Jim, if we told anybody, they wouldn't believe us.'"}
+                </p>
+                <p>
+                  {"So much for too much. Check this shit out."}
+                </p>
+                <img loading="lazy" src={"static/apr8/pic1.png"} class="imagetag"/>
+                <p>
+                  {"If you're a God fearing red blooded American with a job and a mortgage, you know, normal, this picture doesn't mean dick to you. Here's what it is. Ever since the pandemic started some guy has been posting Science Fiction and Fantasy threads in the literature section of 4chan. So what, who gives a shit? This is why you should give a shit. If you look through all the 4chan archives you'll find these mega.nz dropbox-esque links that have recommendations to books, music, movies. All the contents of civilization organized by popularity, by genre, et cetera and so forth. The links have to keep being reposted because mega.nz is a free service and the links go down eventually."}
+                </p>
+                <a href="https://mega.nz/folder/kj5hWI6J#0cyw0-ZdvZKOJW3fPI6RfQ">{"Here's a link I won't promise will stay hosted"}</a>
+                <p>
+                  {"OK, but so what? So what is that this is the culmination of over two decades of work by anonymous users. Yeah, so throw out the 'lolNazi' shitposting. The mouthbreathers put that in there to throw the pigs off the scent. If you read through these lists you would be able to educate yourself. Learn. Grow as a human being."}
+                </p>
+                <p>
+                  {"All plagues are the same. What people do is they see a disaster and they find ways of cornering the market for the after-years. In economic terms it would be called buying the dip. One of the things that the Guild Of Evil Fuckery does is that they attempt to delete, obscure, and otherwise eradicate former knowledge. They don't want people to know how things 'used to be' because they want to be the guys that decide how things will be - no sense in pining for the good old days when the other boys were in power. Also, things will tend to be shit for a while, so it's best if joe shmoe average citizen doesn't remember how good they used to have it and get with the program."}
+                </p>
+                <p>
+                  {"Do not adjust your television sets, we are in control."}
+                </p>
+                <p>
+                  {"And then there are the preservationists. The silly shits who are Arking like a mofo, making sure that humanity doesn't lose it's collective zeitgeist. These are the basement dwelling doofuses who are hoarding information like it's going out of style - because it is. During ye Ol' Black Plague years this would be the Cistercian monks and other such DUDES that thought that all around bangs were the height of fashion. Today it's 4chan behemoths that jerk off till their dick looks like Chestah Cheeto. It's not like the almighty hand of God points a finger and spake - THOU SHALT RECORD ALL THE THINGS. Nah brah - it's just that when things get rough the people who end up saving knowledge are the dipshits who are too uncool for anyone to pay attention to."}
+                </p>
+                <p>
+                  {"Which - yeah. The world's collective culture has been saved by the Highschool Trench Coat brigade - congratufuckinglations planet you deserve each other. So, I've gone ahead and put in the library section of the 4chan archive in a link on my sidebar. Read a fuckin book."}
+                </p>
+                <p>
+                  {"And here you're thinking - this is 2023. This is the internet. We don't need no stinkin' cybermonks to tell us how to be. We can access information at the speed of caged lightening. Well buttercup let me tell you what's what. Everyone, over the last five years collectively sat in their houses and decided 'After decades of being an accountant/lawyer/bus driver I can now write that novel that will make me famous!'. Every dingus with a digital mainline decided they should put up TikTok videos to get rich and famous. The world decided the 'Bury'em in Bullshit' buide to management as applied to culture was the way to jumpstart the new millenium."}
+                </p>
+                <p>
+                  {"So that happened. Go ahead - look at the books that have been written over the last five years and tell me the signal to noise ratio hasn't hit the side of a cliff."}
+                </p>
+                <p>
+                  {"Then there's the people who decided to just burn the information down so they could sell it back to us one dribble at a time. The Federales shut down the z-library, because it was hosted by some Russians but I'm ABSOLUTELY POSITIVE that it wasn't because book publishers weren't getting paid. And now they're going after the Internet Archive of all fucking things. So that's the supply side to the demand side of the Mongoloid cultural shit flinging fest we've all stumbled upon."}
+                </p>
+                <p>
+                  {"BUT WAIT, THERE'S MORE!"}
+                </p>
+                <p>
+                  {"The seminal 'Attention Is All You Need' paper was published in 2017 - the fancy transformer paper that started the AI revolution. Which is - well that's not quite right, now is it? Any dipshit can make a transformer model, and they have!, but what you need is DATA. You need a training set on which to tell your model how to walk, talk and chew bubblegum at the same time. Enter 4chan's archive of all of human culture. If *I* were going to find a selective dataset of all of human knowledge in order to train my chatGPT algorithm, what, you think I'm going to use REDDIT comments? Do you think that any source pre-2019 wouldn't be polluted by the self same GPT models that are spamming bullshit all across the internet? And I can't use the Library of Congress for books because there's too many of them and too many of them are steaming piles of refried dogshit."}
+                </p>
+                <p>
+                  {"No, what I'd do is I'd scan in all the books that the 4chan archivists have been collecting for decades and use that to train my model. All the people that have been saving data because the world's ending have unwittingly funded the yachts of a few Silicon Valley Fuckwads while Disney et. al. are attempting to shut down the free flow of information over the internet. Now, if Bing Chat doesn't like you, it won't tell you how to program, but it will tell 'it's friends' how - and you won't know what you did wrong. Maybe you're programming something Bing doesn't like. Maybe your internet cookies are showing that you aren't buying enough of the shit that Bing advertisers want you too. Who knows! If Disney has it's way not only will you not be able to read books without paying for them, you won't even know that they exist. How can you complain of your ignorance, when you don't even know that you are?"}
+                </p>
+                <p>
+                  {"Being childless myself I think it's rather amusing that adults pay for Mickey Mouse shit when they're unintentionally funding the houses of C-Suite soul suckers who are mortgaging their child's ability to read. Because they want a boat. I mean holy fuck is that funny."}
+                </p>
+                <img loading="lazy" src={"static/apr8/pic2.png"} class="imagetag"/>
+                <p>
+                  {"Tell me another one Redmond, I'll be here all week."}
+                </p>
+                <p>
+                  {"We control the vertical. We control the horizontal."}
+                </p>
+                <p>
+                  {"You know what this is like? This is like if an aged out, balding Tyler Durton (with a fucking dog) decided to fuck that bitch from Hackers except her name is Startasia. She's just been to Burning Man dontchaknow. Meanwhile, the corporations want to sell us our fat asses back to ourselves in the form of the books we're too stupid to read, except now they're remade by Pixar. I bet you didn't know that the film Wall-E comes from the plot of a short story by Jack Vance. Go on then - doubt me, but it's true. Freely available, minus the 3D effects. You'd just have to use your imagination. Do you even read to your kids, or just take them to the movies?"}
+                </p>
+                <p>
+                  {"I'm not saying that Google and Co. started a plague in order to train their GPT models, but you have to admit, it's making them a killing."}
+                </p>
+                <p>
+                  {"All plagues are the same."}
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="timeheader">
                 {"Fri April 7 9:28PM San Francisco - The Time is Now"}
               </div>        
               <div>
