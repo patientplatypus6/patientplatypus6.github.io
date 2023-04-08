@@ -389,7 +389,7 @@ impl Component for Home {
                   {"I had a Kitkat."}
                 </p>  
                 <p>
-                  {"More words tomorrow"}
+                  {"More words tomorrow."}
                 </p>
               </div>
             </div>
