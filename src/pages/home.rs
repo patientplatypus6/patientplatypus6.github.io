@@ -391,6 +391,9 @@ impl Component for Home {
                 <p>
                   {"More words tomorrow."}
                 </p>
+                <p>
+                  {"EDIT - The homeless have switched from smoking pot to vaping something that smells like someone snowballed Toucan Sam. Fucking midgets."}
+                </p>
               </div>
             </div>
             
