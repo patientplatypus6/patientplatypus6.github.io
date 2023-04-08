@@ -376,6 +376,23 @@ impl Component for Home {
             <h1 class="header1">
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
             </h1>     
+
+            <div>
+              <div class="timeheader">
+                {"Fri April 7 9:28PM San Francisco - The Time is Now"}
+              </div>        
+              <div>
+                <p>
+                  {"It's clear that people think I'm a fool. They think that it's OK to drug someone and then find ways to make their life miserable. Doesn't bother me. I took a walk around the Tenderloin tonight and all I saw were lonely people all huddling together for warmth, trying to find ways of not feeling all by themselves. Whole lotta girls in faux-latex pants - what's the matter honey is there a war on? Idiots carting around boomboxes bigger than they are - they light up and everything. No joke, they have to wheel it around on a hand dolly. Why? People looking for solace at the Mosque as the discoteque functions as a people sized bong. Lonesome adulterers doing burnouts in front of the homeless shelter because their ex-wife kicked their dead beat ass out. Just Friday night in the ghetto."}
+                </p>
+                <p>
+                  {"I had a Kitkat."}
+                </p>  
+                <p>
+                  {"More words tomorrow"}
+                </p>
+              </div>
+            </div>
             
             <div>
               <div class="timeheader">
