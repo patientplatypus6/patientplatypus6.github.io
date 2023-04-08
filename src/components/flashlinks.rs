@@ -476,6 +476,13 @@ impl Component for Flashlinks {
                   />
                 </Link<Route>>
               </div>
+              <div class="archivebuttons" style="width: 80px; height: 31px; background: rgba(0,0,0,0); margin-left: 5px; display: inline-block;">
+                <Link<Route> to={Route::Horror}>
+                  <img src={"../static/buttons/horror.png"}
+                    style="width: 100%; height: 100%;"
+                  />
+                </Link<Route>>
+              </div>
             </div>  
             <div style="position: absolute; display: inline-block; top: 0; left: 0; width: 20vw; z-index: 1;">
               <img src={"static/hazard.png"}

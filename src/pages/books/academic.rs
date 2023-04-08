@@ -323,17 +323,17 @@ impl Component for Academic {
                   {"Here's links to some academic books - "}
                 </p>
               </div>
-              <div>
+              <div style="width: 100%; text-align: center;">
                 {
                   for self.books.iter().enumerate().map(|(index, note)| {
                     if note.kind == "Academic".to_string(){
                       html!{
-                        <div key={index}>
+                        <div key={index} style="display: inline-block; margin-left: 5px; margin-bottom: 5px;">
                           <a href={format!("https://drive.google.com/file/d/{}/view", note.clone().bookid)}>
-                            <div style="display: inline-block; width: 10vw;">
+                            <div style="display: inline-block; width: 10vw; height: 15vh;">
                               <img 
                                 loading="lazy" 
-                                style="display: inline-block; width: 100%;"
+                                style="display: inline-block; width: 100%; height: 100%;"
                                 src={format!("https://drive.google.com/uc?export=view&id={}", note.clone().bookid)}
                               /> 
                               <div style="text-decoration: italic; background: rgba(0,0,0,0.2); text-align: center; font-size: 0.8rem; font-weight: bold; padding: 2px; width: calc(100% - 4px); display: inline-block;">

@@ -379,6 +379,17 @@ impl Component for Home {
             
             <div>
               <div class="timeheader">
+                {"Fri April 7 5:26PM San Francisco - The Time is Now"}
+              </div> 
+              <div>
+                <p>
+                  {"I've added all the links in the library. Unplugging. The words will come tomorrow."}
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="timeheader">
                 {"Thurs April 6 6:16PM San Francisco - The Time is Now"}
               </div> 
               <div>

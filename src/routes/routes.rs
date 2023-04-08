@@ -10,7 +10,7 @@ pub enum Route {
     About,
     #[at("/map")]
     Map, 
-    #[at("/book/academic")]
+    #[at("/books/academic")]
     Academic, 
     #[at("/books/classical")]
     Classical, 
@@ -25,5 +25,7 @@ pub enum Route {
     #[at("/books/religion")]
     Religion, 
     #[at("/books/scififantasy")]
-    Scififantasy  
+    Scififantasy, 
+    #[at("/books/horror")]
+    Horror  
 }
