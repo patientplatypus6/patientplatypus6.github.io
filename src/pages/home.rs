@@ -451,6 +451,10 @@ impl Component for Home {
                 <p>
                   {"All plagues are the same."}
                 </p>
+                <p>
+                  {"I will have words to say about this tomorrow. Look forward to it."}
+                </p>
+                <img loading="lazy" src={"static/apr8/pic3.png"} class="imagetag"/>
               </div>
             </div>
 
