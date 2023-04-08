@@ -1151,15 +1151,6 @@ pub fn bookidshandler() -> Vec<BookIDS>{
 
   bookidsvec.push(
     BookIDS{
-      bookid: "1Bf6LrZjcyvF_jzTeOV_AX15gcYFszjHm".to_string(),
-      chartdesc: "Zubiri".to_string(),
-      kind: "Philosophy".to_string()
-    }
-  );
-
-
-  bookidsvec.push(
-    BookIDS{
       bookid: "1TkNjSTbbA3bBLs3x9_4F2rs4YLzPDqsl".to_string(),
       chartdesc: "A Redpilling Guide To the Jewish Question".to_string(),
       kind: "Politics".to_string()
