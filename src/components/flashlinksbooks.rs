@@ -410,6 +410,9 @@ impl Component for Flashlinks {
           <div class="wildlyinappropriate">
             {"And without further ado, here's a link to my neocities account - which is just an ascii art image of a cat's asshole. IN LIVING COLOR - "}<a href={"https://wildlyinappropriate.neocities.org/"}>{"wildlyinappropriate.neocities.org/"}</a>
           </div>
+          <div class="wildlyinappropriate" style="background: orange;">
+            {"And here's a bunch of cool gifs from some nutter on IRC, the internet's asshole: "}<a href={"https://cantelope.org/recentGifs/"}>{"shiny"}</a>
+          </div>
           <div class="archivebuttonscontainer">         
             <div
             style="width: calc(100% - 10px); text-align: left;
