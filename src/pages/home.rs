@@ -375,7 +375,67 @@ impl Component for Home {
 
             <h1 class="header1">
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
-            </h1>     
+            </h1>   
+            
+            <div>
+              <div class="timeheader">
+                {"Sun April 9 10:23AM San Francisco - The Time is Now"}
+              </div>
+              <h3 style="">
+                {"Killing Bob Lee, Maiming Don Carmignani"}
+              </h3>
+              <p>
+                {"You like the title? I'm rather fond of it myself. If it bleeds it leads. If you listen just right you can hear the City by the Bay eating it's children and smell the cries of it's ineptitude. But I'm not a nose man or one of those big eared fellows. I'm the kind of guy that just looks and looks and can't help but see what you refuse to. This will be a picture essay with a large amount of small works so the kids in the back of the class can follow along."} 
+              </p>
+              <p>
+                {"Or as I like to call them, San Franciscans."}
+              </p>
+              <p>
+                {"On Satuday, after doing my write up for the 4chan library I felt at loose ends. The world needed to be told to get fucked and here I was with nothing but time on my hands, a keyboard that wasn't currently on fire, and shoes on my feet. So I got to work. You can learn a lot about war. High explosives and the special effects of high velocity depleted uranium rounds do wonders, but if you need to win hearts and minds - well, my friend - that requires boots on the ground. So I headed out of the library and made my way across the city to wear Bob Lee was stabbed. I had a yearning in my gonads for eye fucking the killing grounds. Maybe there would be a shrine."}
+              </p>
+              <img loading="lazy" src={"static/apr9/pic1.png"} class="imagetag"/>
+              <p>
+                {"Horrifying. But if someone wants to live in an apartment block that looks like an accountant's version of Blade Runner that's his business."}     
+              </p>        
+              <img loading="lazy" src={"static/apr9/pic2.jpg"} class="imagetag"/>
+              <p>
+                {"And this is the kind of corporate fake architecture that the bourgoiseis like to make that's supposed to mimic the alleys of 19th century Europe that were teaming with life. You know how I said that I would have words to say about 'Harassment Architecture'? Well, the book is shit - just looking at the cover you can tell the guy put more effort into the art design than the content. SO EDGY. On the other hand, take a look at the above. You know what I see? I see a Japanese Elm that costs more than most people's houses. This reminds me that Washington, DC razed all the Japanese cherry trees. I see a bench that doesn't have any 'hostile architecture' - that is any arm rests conveniently spaced so that someone can't lie down and sleep. What this tells me that is that the people that live here are rich enough to pay for private security. When archaelogists look back on our civilization, if you could call it that (and if any of it survives), this is the shit that they'll see. It's Aeon Flux for dicks."}     
+              </p>        
+              <p>
+                {"You know what I don't see? I don't see any shrines to the recently departed. Say what you want about the latinos, the blacks gave us Jazz and they gave us Reggaeton for example, but at least when someone dies they're at least a little sad about it. Nada. Nothing. This guy may have been a corporate titan, but there's no one here. Where the fuck is everyone?"}
+              </p>
+              <p>
+                {"This is where they are."}
+              </p>
+              <img loading="lazy" src={"static/apr9/pic3.png"} class="imagetag"/>
+              <p>
+                {"There was an entire parade of hundreds of people that are concerned that San Francisco may not be queer enough. Cool costumes. I think Bob Lee may have wanted a little more law and order, but I didn't see anyone protesting that he was killed. Speaking of 'say what you want', when the Blacks have a protest they happen to mention someone that was killed. You're having a protest because now you need to get your abortion pills by mail order? Maybe people who've managed to get themselves stabbed are more worthy of a march. This is the level of asshole I have to deal with walking down the sidewalk on a daily basis."}
+              </p>
+              <p>
+                {"This is why Bob Lee was killed, and no one is paying attention."}
+              </p>
+              <img loading="lazy" src={"static/apr9/pic4.png"} class="imagetag"/> 
+              <p>
+                {"Across the street from the 300 block in San Francisco there's a bus station that's been abandoned for 4 years. They've slapped a fancy new name on the side of the sign and thrown a bunch of shipping containers with 'interactive exhibits' in there, an outdoor gym, some food stalls. But where once there was a teaming bus station filled with people there's now urban blight and a parking lot."}
+              </p>
+              <img loading="lazy" src={"static/apr9/pic5.png"} class="imagetag"/>
+              <p>
+                {"You know that scene from the movie Drive, where the hero goes into the stadium and a bunch of similar cars came out and race all over the city when the game was over? If I was going to stab someone and wanted to get away with it, I'd park a bunch of identical cars or motorcycles in an abandoned parking lot and then have everyone go in different directions. Wars are about hearts and minds, and in the end it all comes down to physics and geography. You have to make a corpse and then depart the scene as quickly as possible. Killing is easy - finding a way to distance ones self from 6 feet and 200 pounds of decaying carbon right quick is the tricky part."}
+              </p>
+              <img loading="lazy" src={"static/apr9/pic6.png"} class="imagetag"/>
+              <p>
+                {"And let's look inside the abandoned bus terminal. Oooooh classy. I bet anyone with a pen knife who wanted to break in could lie low for an hour or so after stabbing a motherfucker."}
+              </p>
+              <p>
+                {"I'd say it's a cruel irony that the urban blight that came about from tax avoidance and the impoverishment of the middle class most likely had a direct hand in facilitating Bob Lee's murder, but it's not. It's just war by other means. As far as Don Carmignani is concerned the answer is so much simpler. The tweakers hate it when the Fire Department goes through the ghetto blasting their sirens so they rolled up to his house, beat him over the head and gave him a Cheshire smile. See, he's like the Joker, get it? Fucking tweakers."}
+              </p>
+              <p>
+                {"It sure as shit is cheaper and safer than having the chickenshit boys in the blue pajamas walk up and down Hyde street and arrest anyone smoking meth. The sirens bit, not the carving up police chiefs bit, but that too come to think of it. My sister thinks I need therapy. I think San Francisco needs a journalist. Maybe you could hold a fundraiser to come up with the funds to pay someone to tell you to go fuck yourselves."}
+              </p>
+              <p>
+                {"You could even throw a parade."}
+              </p>
+            </div>
 
             <div>
               <div class="timeheader">
