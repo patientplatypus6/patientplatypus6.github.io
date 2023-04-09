@@ -385,7 +385,7 @@ impl Component for Home {
                 {"Killing Bob Lee, Maiming Don Carmignani"}
               </h3>
               <p>
-                {"You like the title? I'm rather fond of it myself. If it bleeds it leads. If you listen just right you can hear the City by the Bay eating it's children and smell the cries of it's ineptitude. But I'm not a nose man or one of those big eared fellows. I'm the kind of guy that just looks and looks and can't help but see what you refuse to. This will be a picture essay with a large amount of small works so the kids in the back of the class can follow along."} 
+                {"You like the title? I'm rather fond of it myself. If it bleeds it leads. If you listen just right you can hear the City by the Bay eating it's children and smell the cries of it's ineptitude. But I'm not a nose man or one of those big eared fellows. I'm the kind of guy that just looks and looks and can't help but see what you refuse to. This will be a picture essay with a large amount of small words so the kids in the back of the class can follow along."} 
               </p>
               <p>
                 {"Or as I like to call them, San Franciscans."}
