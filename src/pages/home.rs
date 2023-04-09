@@ -391,7 +391,10 @@ impl Component for Home {
                 {"Or as I like to call them, San Franciscans."}
               </p>
               <p>
-                {"On Satuday, after doing my write up for the 4chan library I felt at loose ends. The world needed to be told to get fucked and here I was with nothing but time on my hands, a keyboard that wasn't currently on fire, and shoes on my feet. So I got to work. You can learn a lot about war. High explosives and the special effects of high velocity depleted uranium rounds do wonders, but if you need to win hearts and minds - well, my friend - that requires boots on the ground. So I headed out of the library and made my way across the city to wear Bob Lee was stabbed. I had a yearning in my gonads for eye fucking the killing grounds. Maybe there would be a shrine."}
+                {"On Satuday, after doing my write up for the 4chan library I felt at loose ends. The world needed to be told to get fucked and here I was with nothing but time on my hands, a keyboard that wasn't currently on fire, and shoes on my feet. So I got to work. You can learn a lot from war. Beautiful bunker busters and the special effects of high velocity depleted uranium rounds do wonders, but if you need to win hearts and minds - well, my friend - that requires boots on the ground. So I headed out of the library and made my way across the city to wear Bob Lee was stabbed. I had a yearning in my gonads for eye fucking the killing grounds. Maybe there would be a shrine."}
+              </p>
+              <p>
+                {"Behold!"}
               </p>
               <img loading="lazy" src={"static/apr9/pic1.png"} class="imagetag"/>
               <p>
