@@ -434,7 +434,7 @@ impl Component for Home {
               <p>
                 {"This used to be a Wells Fargo location in Seattle, where they gave people loans to start small businesses, to put their kids through college, to refinance their homes. Now it's a pot dispensary called 'The Reef'."}
               </p>
-              <img loading="lazy" src={"static/apr10/bank2.png"} class="imagetag"/>
+              <img loading="lazy" src={"static/apr10/bank3.png"} class="imagetag"/>
               <p>
                 {"And here's a speakyeasy called 'Local Edition'. Were that it were a newspaper rather than a bar."}
               </p>
@@ -443,7 +443,7 @@ impl Component for Home {
                 {"I'm not the Batman and there isn't some mastermind Joker hatching a nefarious plot to make the world a sad and despicable place. Were it that easy! There would only be one villian to fight and if we could only imprison or cure him then the world would be a shiny happy place. What I see is a whole lot of adults that think that dark laughter is a preferable stand in for serious happiness because they've lost all hope for the future. The lot of you are fucking sad."}
               </p>
               <p>
-                {"There's only one movie theatre in all of San Francisco that still shows movies and hasn't been converted into a parody of itself. Yeah, the movie on the marquee is shit. And it's in the latin ghetto. But it's proof that not all of the world is a cold, and grey, and dead. I don't know who these people are that shop at marijuana banks and whiskey newspapers, but I'd much rather see a shit film in a movie theatre that still has seats."}
+                {"There's only one movie theatre in all of San Francisco that still shows movies and hasn't been converted into a parody of itself. Yeah, the movie on the marquee is shit. And it's in the latin ghetto. But it's proof that not all of the world is  cold, and grey, and dead (I used to have Explosions In the Sky on vinyl - a far superior band). I don't know who these people are that shop at marijuana banks and whiskey newspapers, but I'd much rather see a shit film in a movie theatre that still has seats."}
               </p>
               <img loading="lazy" src={"static/apr10/theatre.jpg"} class="imagetag"/>
             </div>
