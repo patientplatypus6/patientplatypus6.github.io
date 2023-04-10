@@ -379,9 +379,80 @@ impl Component for Home {
             
             <div>
               <div class="timeheader">
+                {"Sun April 10 10:11AM San Francisco - The Time is Now"}
+              </div>
+              <h3>
+                {"JUMP, YOU FUCKERS!"}
+              </h3>
+              <img loading="lazy" src={"static/apr10/jump.png"} class="imagetag"/>
+              <p>
+                {"I was minding my own business just sunning myself at the Marina when these assholes come up and smoke pot and start talking about their dog. We should play 'the jump game we haven't done that in a while'. Maybe I just wanted to sleep and be left the fuck alone. Anyway, as I was walking back to the city this happened. What the behaviourists like to do is steer you towards what they want you to see. It takes money, and it takes time and effort, but they want to corral the homeless and the people they can write a master's thesis on. Because experimenting on the disenfranchised is easy and they can replicate the studies on college students."}
+              </p>
+              <img loading="lazy" src={"static/apr10/jump2.png"} class="imagetag"/>
+              <p>
+                {"Take a look at this. It's not like they're wrong to hate this. First as tragedy and then as farce has rules. This isn't hockey. I don't know where it's written down but somewhere, on the same sheet of paper that says 'don't perform unlicensed psychological experiments on the poor' is something something 'you need to be this tall to be defenstrated from an ivory tower'. Last I checked, we, as a society shouldn't have 10 year old's jumping off of buildings."}
+              </p>
+              <p>
+                {"I mean, whose to say whether the nets are here because the school is so poor that the students have no hope or so rich that the expectations placed on the students are so high that they can never meet them. You and I both know that there's no way in hell that these kids would ever be able to afford to live in San Francisco with the way things are going. And yeah, I passed several schools that didn't have nets on them where the students are presumably happy and not chained to their desks or having the windows nailed shut. Although, this being California, maybe that's not true."}
+              </p>
+              <p>
+                {"And then I passed the Microsoft building, which reminds me of Patrick Murphy, a guy who I knew in college and who hates my guts. When I was looking for a job, I went up to Seattle hat in hand to beg him for work as I was living in my car. He took me out to dinner once and then laughed and said his couch was too small for someone to crash at his place. Maybe he was telling the truth. Maybe he is broke after working at Microsoft for 15 years as a manager. But what I do know is that if I hated someone that badly I'd just tell them to get lost. And I do know that, despite the dog fuckers in the park that want their little political totem pissed across the internet, I'd rather see the suicide nets where they belong."}
+              </p>
+              <img loading="lazy" src={"static/apr10/microsoft.png"} class="imagetag"/>
+              <p>
+                {"This image was edited using Facebook's segment anything model. Feel free to violate their terms of service by paying me for this art. They trained their model on other artist's copyrighted work, and have done it in such a way that it'll put millions out of business. So it's not like they deserve the money. They didn't break the social contract so much as use it for toilet paper."}
+              </p>
+              <p>
+                {"Maybe I am more dog than human being. I do remember when I was looking for work in New York a fancy middle manager asked me who I looked up to the most. I said Diogenes of Syracuse because he told the truth and wouldn't take shit from anyone. He said, 'I meant anyone living'. Come on, 'If only I could fill my belly by rubbing my stomach' - only a fucking legend could make a jerk off joke that's still relevant thousands of years later. In any case, the last time I spoke to my sister's husband, after he gave me $300 to go away, he told me that the best way to cure all the sores on my body was to go to the gas station and buy ringworm remover for dogs. Turns out I had body lice, which several rounds of antibiotics that gave me the shits and made my teeth loose wouldn't cure. Al McDonald and Natash Sileski everyone, let's give them a round of applause."}
+              </p>
+              <p>
+                {"Here's what I see."}
+              </p>
+              <p>
+                {"I see a whole lot of adults that are starting dark humor businesses that are standins for what society used to have. It's like if someone listened to Bulls On Parade in one ear, The Wall in the other and then repeatedly hit themselves over the head with a brick while on acid. Except that somebody is the entire Western Seaboard of the United States. It's not a library, it's a mind cemetary. That's the dark sarcasm in the classroom of our broken hopes and dreams."}
+              </p>
+              <p>
+                {"It's not a theatre it's a gym - "}
+              </p>
+              <img loading="lazy" src={"static/apr10/gym1.png"} class="imagetag"/>
+              <p>
+                {"And another - "}
+              </p>
+              <img loading="lazy" src={"static/apr10/gym2.png"} class="imagetag"/>
+              <p>
+                {"And in Ocean Beach they turned the movie theatre into a gift shop. And here's a bunch of dogs in front of it, wonderful."}
+              </p>
+              <img loading="lazy" src={"static/apr10/wings.png"} class="imagetag"/>
+              <p>
+                {"This fuckery isn't just confined to movie theatres. People have been turning banks into marijuana dispensaries, because that's funny. And it's not an isolated incident either."}
+              </p>
+              <img loading="lazy" src={"static/apr10/bank1.png"} class="imagetag"/>
+              <p>
+                {"Here's a dispensary that's been fashioned into a 'bank', right next to a Wells Fargo in downtown San Francisco."}
+              </p>
+              <img loading="lazy" src={"static/apr10/bank2.png"} class="imagetag"/>
+              <p>
+                {"This used to be a Wells Fargo location in Seattle, where they gave people loans to start small businesses, to put their kids through college, to refinance their homes. Now it's a pot dispensary called 'The Reef'."}
+              </p>
+              <img loading="lazy" src={"static/apr10/bank2.png"} class="imagetag"/>
+              <p>
+                {"And here's a speakyeasy called 'Local Edition'. Were that it were a newspaper rather than a bar."}
+              </p>
+              <img loading="lazy" src={"static/apr10/bar.png"} class="imagetag"/>
+              <p>
+                {"I'm not the Batman and there isn't some mastermind Joker hatching a nefarious plot to make the world a sad and despicable place. Were it that easy! There would only be one villian to fight and if we could only imprison or cure him then the world would be a shiny happy place. What I see is a whole lot of adults that think that dark laughter is a preferable stand in for serious happiness because they've lost all hope for the future. The lot of you are fucking sad."}
+              </p>
+              <p>
+                {"There's only one movie theatre in all of San Francisco that still shows movies and hasn't been converted into a parody of itself. Yeah, the movie on the marquee is shit. And it's in the latin ghetto. But it's proof that not all of the world is a cold, and grey, and dead. I don't know who these people are that shop at marijuana banks and whiskey newspapers, but I'd much rather see a shit film in a movie theatre that still has seats."}
+              </p>
+              <img loading="lazy" src={"static/apr10/theatre.jpg"} class="imagetag"/>
+            </div>
+
+            <div>
+              <div class="timeheader">
                 {"Sun April 9 10:23AM San Francisco - The Time is Now"}
               </div>
-              <h3 style="">
+              <h3>
                 {"Killing Bob Lee, Maiming Don Carmignani"}
               </h3>
               <p>
