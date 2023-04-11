@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_681a8f97393897a28110c852b8696a63b43b59e5(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).globalCompositeOperation=($1); }
+export function __cargo_web_snippet_2682cf5dba376aaf776ca50b2a181db54cbbf305(Module, $0, $1, $2, $3) { $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);Module.STDWEB_PRIVATE.from_js($0, (function(){try{($1).addColorStop(($2),($3));return{success:true};}catch(error){return{error:error,success:false};}})()); }

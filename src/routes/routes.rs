@@ -10,6 +10,8 @@ pub enum Route {
     About,
     #[at("/map")]
     Map, 
+    #[at("/wall")]
+    Wall, 
     #[at("/books/academic")]
     Academic, 
     #[at("/books/classical")]

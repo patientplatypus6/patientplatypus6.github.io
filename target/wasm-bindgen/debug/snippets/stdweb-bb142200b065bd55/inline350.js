@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_2f3239a466aeab7e8a05926265d77091645d0488(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);var array=($0);var pointer=($1);Module.HEAPU16.set(array,pointer); }
+export function __cargo_web_snippet_aa5f82b91baa16d8f7102b6cc54005b8841bcd45(Module, $0) { return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof Int8Array) | 0; }

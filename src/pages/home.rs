@@ -376,10 +376,28 @@ impl Component for Home {
             <h1 class="header1">
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
             </h1>   
+
+            <div>
+              <div class="timeheader">
+                {"Tues Apr 11 1:59PM San Francisco - The Time is Now"}
+              </div>
+              <h3>
+                {"I'm so Lucky!"}
+              </h3>
+              <img loading="lazy" src={"static/apr11/lucky.png"} class="imagetag"/>
+              <div>
+                <p>
+                  {"I'm so lucky. I'm allowed to tell all of you to go fuck yourselves and it doesn't cost me a penny."}
+                </p>
+                <p>
+                  {"In other news, there's a gondola over at the Taj Ma Bus Stop (a la Sales Force Park) where you can't enter from the fourth floor park. If you attempt to get on two doors will close, an alarm will go off, an automated voice will say 'YOU MUST BOARD FROM THE BOTTOM'. The poor bastard who's job it is to charge people at the bottom to ride the stupid fucking thing rather than take the stairs will shout at you as the doors close. There I was shouting 'WHAT?!' as he was cut off and the gondola ran away from me, with him inside it, as he berated me red faced in his little glass box of silence. That's free too! I highly recommend it. Way more entertainment value than whatever they're charging to ride their stupid idiot box up the side of a parking garage."}
+                </p>
+              </div>
+            </div>
             
             <div>
               <div class="timeheader">
-                {"Sun April 10 10:11AM San Francisco - The Time is Now"}
+                {"Mon April 10 10:11AM San Francisco - The Time is Now"}
               </div>
               <h3>
                 {"JUMP, YOU FUCKERS!"}

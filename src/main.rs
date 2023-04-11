@@ -9,6 +9,8 @@ use yew_page::pages::home::Home;
 use yew_page::pages::links::Links;
 use yew_page::pages::about::About;
 use yew_page::pages::map::Map;
+use yew_page::pages::wall::Wall;
+
 use yew_page::pages::books::academic::Academic;
 use yew_page::pages::books::classical::Classical;
 use yew_page::pages::books::historybooks::Historybooks;
@@ -18,6 +20,7 @@ use yew_page::pages::books::politics::Politics;
 use yew_page::pages::books::religion::Religion;
 use yew_page::pages::books::horror::Horror;
 use yew_page::pages::books::scififantasy::Scififantasy;
+
 
 use yew_page::routes::routes::Route;
 
@@ -50,7 +53,8 @@ fn switch(routes: Route) -> Html {
         Route::Politics => html! { < Politics /> },
         Route::Religion => html! { < Religion /> },
         Route::Horror => html! { < Horror /> },
-        Route::Scififantasy => html! { < Scififantasy /> }
+        Route::Scififantasy => html! { < Scififantasy /> },
+        Route::Wall => html! { < Wall /> }
     }
 }
 
