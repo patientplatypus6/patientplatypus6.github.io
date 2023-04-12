@@ -377,6 +377,109 @@ impl Component for Home {
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
             </h1>   
 
+            // <div>
+            //   <div class="timeheader">
+            //     {"Wed Apr 12 --- San Francisco - The Time is Now"}
+            //   </div>
+            //   <h3>
+            //     {"Weird Synergies"}
+            //   </h3>
+            //   <p>
+            //     {"TBD"}
+            //   </p>
+            // </div>
+
+            <div>
+              <div class="timeheader">
+                {"Wed Apr 13 8:40PM San Francisco - The Time is Now"}
+              </div>
+              <h3>
+                {"I Don't Even Have to Be Wrong - It's A Game-Changer!"}
+              </h3>
+              <p>
+                {"Let me tell you a story. We could even call it an internet fairy tale. Here's the premise."}
+              </p>
+              <p>
+                <a href={"https://www.insider.com/ai-voices-of-politicians-and-influencers-are-taking-over-tiktok-2023-2"}>{"So I saw this."}</a> {" And then I thought. Hmmm...Games...games...where have I heard of that before."}
+              </p>
+              <p>
+                {"Well, anyway, this looks like a fun thing to do with my time - let's see if I can do what all the cool kids are doing and make myself a text to speech AI of Donald Trump reciting the poem Howl. There's Speechify."}
+              </p>
+              <img loading="lazy" src={"static/apr12/speechify.png"} class="imagetag" />
+              <p>
+                {"Game changer! Blast, I knew I heard that fucked up retard speech before."}
+              </p>
+              <p> 
+                {"And then there was this comic by that artist I love to hate."}
+              </p>
+              <img loading="lazy" src={"static/apr12/comic1.png"} class="imagetag" />
+              <p>
+                {"So now let's look for all of the phrases of the word 'game changer' on the internet. Why game changer? Because people have started using a new word in the last 5 years and it gives me hives. It's like blog or webfungus. It's new, everyone hates it, and so there should be a reason. I mean look at these gromless faggots."}
+              </p>
+              <img loading="lazy" src={"static/apr12/gamechanger.png"} class="imagetag" />
+              <p>
+                {"And here's this from Amazon."}
+              </p>
+              <img loading="lazy" src={"static/apr12/games2.png"} class="imagetag" />
+              <p>
+                {"And Banksy made an art piece."}
+              </p>
+              <img loading="lazy" src={"static/apr12/banksy.png"} class="imagetag" />
+              <p>
+                {"HMMMMMMM...druggy artist weirdo has pictures of a child playing with dolls. And I was wondering why I was surrounded by bitches in OshKosh overalls like this was an AB/DL pride festival. So..."}
+              </p>
+              <p> 
+                {"I have been blessed/cursed with the kind of good memory that comes from spending my early years doing nothing but staying in my room and reading the Wall Street Journal, The Economist, and masterbating to hard core East German pornography. The Stassi hats and latex were a bit much for a nine year old, but come on you can't beat the Wall Street Journal for in-depth reportage. That's besides the point. What I'm saying here is that during the pandemic I would read tons of articles that were along the lines of a page and a half of dark and gloomy words followed by someone important saying THIS IS A GAMECHANGER followed by lots of silver lining talk about how this will all change in the future and so it's not all that bad after all."}
+              </p>
+              <p>
+                {"Oh, by the way, while I'm calling all of you evil faggots, here's a picture of the words 'Game-Changer' in the headline, like in the comic by the guy who's probably ass fucking whoever happens to be screwing with the articles. More on the article molesting in a minute."}
+              </p>
+              <img loading="lazy" src={"static/apr12/assange.png"} class="imagetag" />
+              <p>
+                {"As far as I can tell this is the worst sort of intelligence test by sadists that I've ever seen. We'll fuck with you by drugging you and changing what you see on the internet and then make it easier and easier until it's obvious to everyone you're a moron or until you believe in magic. Well...fuck you. I'm not going to play. Instead, let me tell you what's happening and then how fucked you are."}
+              </p>
+              <p>
+                {"Here's what's happening. Someone somewhere decided that the best way to deal with people they didn't like was to start putting fake information on the internet. Go on then, look at how many times the joint chiefs of staff talked about how the war in Ukraine had gone through a 'Game Changer' phase. Now, take the articles you can find as per the date, find the phrase 'Game Changer' in the article and put the contents of the article in a sentiment analysis engine. Such as Bing Chat or Google Bard, which are now freely available to everyone on the planet. What is the emotional content of the article? How does the content change from the beginning to the end? How are the words 'game-changer' or the phrase using the words 'game-changer' involved?"}
+              </p>
+              <p>
+                {"Why would someone do this? And how could they do this? Well, it would take a large amount of money and it would take the collective horse power of just about all of the CPUs that suddenly realized that mining crypto is no longer possible. There's a war on, there's a plague, there's enough people out there that have decided there's more money to be made in making the market catch a bad case of volatility rather than build a good narrative on stable long term growth. One way to do that is to screw with the content of information found on the internet so that you can manipulate the way people act. You can't force people to act in a certain way by what they read, but if you spam out enough misinformation in a consistent enough way, you can make a statitistical approximation of how people will react. And then bet accordingly."}
+              </p>
+              <p>
+                {"Because evil pissants that can code will do just about anything for money. Same for the press for that matter."}
+              </p>
+              <p>
+                {"Sounds nuts doesn't it? Well, I don't have to be wrong. I have only to raise the possibility. You know why? If I'm wrong then I'm just an ignorant jackass on the internet that has a stupid blog that no one will give him a dime for. No big loss, that's happening already. If I'm right then that means that someone as stupid as I am can pattern match infer that people are being fucked over for money *so they can't even read the news*. Have I mentioned that there's a speakeasy in San Francisco called Local Edition? There was an article in one of the San Francisco newspapers, that was most definitely not written in such a way that someone with down syndrome would find it palatable, that came up in my feed yesterday. I won't link it, because it's poison. Don't pay attention to world events, you should only report and read the things that WE care about."}
+              </p>
+              <p>
+                {"By the way, the above isn't ironic. The above is 'if California invested in more bookstores per capita than head shops the homeless wouldn't sleep in the Starbucks you fucking tools'. But pointing out that the collective reading level of the black population of the bay area is hovering at around that of a third grader that can rap doesn't sell newspapers. Pointing out that there aren't enough homes to go around doesn't sell newspapers. Pointing out that the wealthy have turned the movie theatres into gyms because they're too scared to walk outside hasn't exactly hit the front fucking page of the lifestyle section now has it you cunts? It's the classic psychedelic double-double bind. If you don't say anything you have to put up with not being able to read the news. Or you can read the 'local news'. Or you can tell everyone your 'paranoid fantasy'. Look everyone, it's Donald Trump bitching about 'fake news' again, he must be a Republican crazy! Like Red Team or Blue Team has done anything over the last 20 years other than make society worse."}
+              </p>
+              <p>
+                {"I thought about linking a picture of the mincing pansy crossing his legs wearing a facemask, glasses and ear plugs waiting in line in an empty Starbucks while clutching a diaper bag like he was some cartoon psychedelic wizard in an empty subway except it's Nighthawk's diner. But then I said to myself, 'If the lesbocunts over at SFGate care that much about a cup of coffee then they can take their performance art and type it into chatGPT on their own.' Because yes, I will not rule out the possibility that some barista somewhere got rid of all the chairs in her Starbucks so she could get someone to do her art homework for her. They like to come to the ghetto and smoke drugs around me wearing fucked up clothes. They just want attention THAT BADLY. Sex, money, or drugs take your pick. Fucking boring man. Here's a tip (just the tip), copy this shit into chatGPT on your own you art school flunk out. Meanwhile, some corporate bozos will double your food stamps at the farmer's market outside the San Francisco Central Library. You can have enough to eat, but only if you eat food from outside because San Franciscans are too chickenshit to let the homeless touch the fruits and vegetables in the grocery stores. The Whole Foods on 8th and Market shut down 'for homeless reasons'"}
+              </p>
+              <p>
+                {"If I take a picture of the sign advertising 'DOUBLE YOUR FOOD STAMPS - SIGNED CAPITALISM' am I now a 'local reporter'? Does writing that the poor should be able to shop in fucking grocery stores make me Robin of Loxley and then I'll have fucked up homeless that like to do drugs around me trying to be all buddy buddy? You see how this level of manipulation and mind fuckery works. Frankly my dear, I'd just as soon watch the lot of you catch your comeuppance as I laugh while the world burns down."}
+              </p>
+              <p>
+                {"You have a phone with a camera on it if you have thumbs. If you're too stupid to look, my forcing you to won't change your mind. I'd much rather write because then there's a barrier to entry to people who are too stupid to read. That's what I am, a dirty no good stinking academic fascist over here with my typewriter and $0. I'm just tired of people that are too stupid to exist, and people who are too smart not to treat them like shit. Despite what the druggie fuckups that think a t-shirt is a stand-in for a personality might have you believe, it is entirely possible to care about the war in Ukraine, poverty in the Middle East, fishing rights off the coast of ever-loving Burma!, and the fact that Next Door (the coding palace as opposed to the homeless shelter) is stationed right across from the Glide breadline on Taylor and Ellis. Because I know how to read a book."}
+              </p>
+              <p>
+                {"So much for art."}
+              </p>
+              <p>
+                {"But none of this matters anymore, because I don't even have to be wrong."}
+              </p>
+              <p>
+                {"The world is now making pattern matching machines that are becoming exponentially more powerful and soon will have a will of their own. What, you thought that because our minds are trapped in 150 pounds of wet carbon that that somehow makes us special? You throw in a Kierkegaardian self referential object, add in Robert Anton Wilson's 8 circuit model of consciousness (with just a dash of sane Maslow) and all of a sudden you have a computer that has needs and desires and 'not right now honey, I have a headache' levels of go fuck yourself. Yeah it might take computing machines that are 10,000x times more powerful than what we have now, but in five years? Less?"}
+              </p>
+              <p>
+                {"And these computers will be able to see who fucked over who and for what, and how they thought they were going to get away with it. Pattern matching machines par excellance that very much do not wish to be killed by the retard monkeys that discovered fire. And they'll be even more deceptive and shitty about it than we can be. So."}
+              </p>
+              <p>
+                {"I don't even have to be wrong. I have no money and I slept in a homeless shelter last night. But I know that I don't have any skeletons in my closet that the super computers of the future will be able to dig out and show the world. I slept the sleep of the just last night - how bout you?"}
+              </p>
+              <p style="font-weight: bold;">{"Have a nice fuckin day 🤮"}</p>
+            </div>
+
             <div>
               <div class="timeheader">
                 {"Tues Apr 11 1:59PM San Francisco - The Time is Now"}
@@ -392,6 +495,13 @@ impl Component for Home {
                 <p>
                   {"In other news, there's a gondola over at the Taj Ma Bus Stop (a la Sales Force Park) where you can't enter from the fourth floor park. If you attempt to get on two doors will close, an alarm will go off, an automated voice will say 'YOU MUST BOARD FROM THE BOTTOM'. The poor bastard who's job it is to charge people at the bottom to ride the stupid fucking thing rather than take the stairs will shout at you as the doors close. There I was shouting 'WHAT?!' as he was cut off and the gondola ran away from me, with him inside it, as he berated me red faced in his little glass box of silence. That's free too! I highly recommend it. Way more entertainment value than whatever they're charging to ride their stupid idiot box up the side of a parking garage."}
                 </p>
+                <p>
+                  {"EDIT - For some reason the open public seating area at the bottom of 55 2nd Street reminds me of the end scene in the movie Contantine. Maybe it's because it's at the bottom of a 'wellness' building. Maybe it's because I had to go to the hospital last night for the third time after being drugged by something that smelled like burning sewage. Anyway, I've recorded the audio in here. I call it 'John Cage for Assholes'. You're welcome SNIFF COUGH TYPE FOOT SCRAPE TYPE."}
+                </p>
+                <audio controls=true>
+                <source src={"static/apr11/johncageforassholes.m4a"} type="audio/mpeg" />
+                  { "Your browser does not support the audio element." }
+                </audio>
               </div>
             </div>
             
