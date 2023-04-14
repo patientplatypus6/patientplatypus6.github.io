@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_5c57e16ebd22655f976d87fae8039e282d7bab59(Module, $0) { Module.STDWEB_PRIVATE.from_js($0, (function(){return Array.from(navigator.getGamepads());})()); }
+export function __cargo_web_snippet_848ea1c1240c42ae5105b8df122e9a2d6d288162(Module, $0, $1) { return Module.STDWEB_PRIVATE.acquire_rust_reference( Module.HEAPU16.slice( $0, $1 ) ); }

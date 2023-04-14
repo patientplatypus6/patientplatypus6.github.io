@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_dc8e7bbf6495cc2abd8497d69efceb13d03d30d7(Module, $0, $1, $2, $3, $4) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);($0).clearRect(($1),($2),($3),($4)); }
+export function __cargo_web_snippet_1cd2480577300069ee180a301b489813d9497d49(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).drawFocusIfNeeded(($1)); }

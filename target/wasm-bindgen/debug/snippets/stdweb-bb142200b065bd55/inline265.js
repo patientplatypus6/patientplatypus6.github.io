@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_798edd23c05eb5181f10e8aaf4c3cb846dfd0a97(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof ImageData); }
+export function __cargo_web_snippet_8c8a0fd988218bf31fae8adc33f715997855bce8(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).font=($1); }

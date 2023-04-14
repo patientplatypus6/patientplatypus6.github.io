@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_2cd1f9200b3228e3c2bfab1cac27afd46a34b4fc(Module, $0) { $0 = Module.STDWEB_PRIVATE.to_js($0);($0).deleteFromDocument(); }
+export function __cargo_web_snippet_23da030d23aaf3529f62ea9094e98473d3665f3a(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof TextMetrics); }

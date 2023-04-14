@@ -313,7 +313,10 @@ impl Component for Wall {
           <div class="contentcontainer">
             <h1 class="header1">
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
-            </h1>      
+              <p style="color: white; background: black; font-size: 0.8rem; padding: 5px; margin-bottom: 0; margin-top: -20px; font-weight: 900;">
+                {"Me? I'm the idiot child of technology's conscience. Who the fuck are you?"}
+              </p>
+            </h1>     
             <div>
               <div class="timeheader">
                 {"Places to go, things to be"}

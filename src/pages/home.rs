@@ -97,25 +97,11 @@ impl Component for Home {
 
             @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-            @keyframes rainbow {
-              0% { color: red; }
-              14% { color: orange; }
-              28% { color: yellow; }
-              42% { color: green; }
-              57% { color: blue; }
-              71% { color: indigo; }
-              85% { color: violet; }
-              100% { color: red; }
-            }
-
             .header1{
-              background-image: linear-gradient(to top right, rgba(0,0,0,0.5) 0%,rgba(0,255,0,0.5) 100%), url('static/banner.png') !important;
-              font-family: 'Creepster', cursive;
+              text-decoration: none !important;
               font-size: 3em;
               text-align: center;
-              text-decoration: underline;
               font-weight: bold;
-              animation: rainbow 5s infinite;
               padding-top: 0;
               padding-bottom: 0;
               margin-top: 0;
@@ -337,6 +323,23 @@ impl Component for Home {
               transition: 0.1s;
             }
 
+            .hitcounter{
+              background: darkpurple !important;
+              color: lightorange !important;
+              padding: 0px;
+              padding-top: 5px;
+              margin: 0px;
+              font-style: none;
+              font-weight: bold;
+              width: 100%;
+              font-size: 0.8rem;
+
+            }
+            
+            .LTF_hitcounter{
+              margin-bottom: 0px;
+            }
+
           "}
         </style>
         <div class="main">
@@ -375,9 +378,13 @@ impl Component for Home {
 
             <h1 class="header1">
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
-              <p style="color: white; background: black; font-size: 0.8rem; padding: 5px; margin-bottom: 0; margin-top: -20px; font-weight: 900;">
+              <p style="color: white; background: black; font-size: 0.8rem; padding: 5px; margin-bottom: 0; margin-top: -20px; font-weight: 900; text-decoration: underline; font-family: 'Creepster', cursive;">
                 {"Me? I'm the idiot child of technology's conscience. Who the fuck are you?"}
               </p>
+              <div style="color: white; background: black; font-size: 0.8rem; padding: 5px; margin-top: 0px; font-weight: 900; text-decoration: none; font-size: 0.8rem; font-family: 'Times New Roman', cursive; background-color: darkorange; color: purple;">
+                {"The number of people who don't give a shit since forever - "}
+                <script type={"text/javascript"} src={"//cdn.livetrafficfeed.com/static/hitcounterjs/live.js?sty=2&min=7&sta=1&uni=1&tz=Asia%2FTokyo&ro=0"}></script><noscript id={"LTF_hitcounter"}><a href={"https://livetrafficfeed.com/hit-counter"}>{"Website Hit Counter"}</a></noscript>
+              </div>
             </h1>   
 
             {self.apr14(ctx)}

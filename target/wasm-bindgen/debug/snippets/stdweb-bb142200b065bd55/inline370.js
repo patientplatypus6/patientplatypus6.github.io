@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_d03e4e6d48881ee5c20109a9318e607926dc91df(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof KeyboardEvent && o.type === "keypress"); }
+export function __cargo_web_snippet_0548409232e47863a42b597d3edba1463d7ec2c2(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).connected;})()); }
