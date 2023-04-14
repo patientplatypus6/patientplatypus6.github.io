@@ -377,17 +377,7 @@ impl Component for Home {
               <img loading="lazy" src={"static/title.png"} class="imagetag"/>
             </h1>   
 
-            // <div>
-            //   <div class="timeheader">
-            //     {"Wed Apr 12 --- San Francisco - The Time is Now"}
-            //   </div>
-            //   <h3>
-            //     {"Weird Synergies"}
-            //   </h3>
-            //   <p>
-            //     {"TBD"}
-            //   </p>
-            // </div>
+            {self.apr13(ctx)}
 
             <div>
               <div class="timeheader">
@@ -457,7 +447,7 @@ impl Component for Home {
                 {"I thought about linking a picture of the mincing pansy crossing his legs wearing a facemask, glasses and ear plugs waiting in line in an empty Starbucks while clutching a diaper bag like he was some cartoon psychedelic wizard in an empty subway except it's Nighthawk's diner. But then I said to myself, 'If the lesbocunts over at SFGate care that much about a cup of coffee then they can take their performance art and type it into chatGPT on their own.' Because yes, I will not rule out the possibility that some barista somewhere got rid of all the chairs in her Starbucks so she could get someone to do her art homework for her. They like to come to the ghetto and smoke drugs around me wearing fucked up clothes. They just want attention THAT BADLY. Sex, money, or drugs take your pick. Fucking boring man. Here's a tip (just the tip), copy this shit into chatGPT on your own you art school flunk out. Meanwhile, some corporate bozos will double your food stamps at the farmer's market outside the San Francisco Central Library. You can have enough to eat, but only if you eat food from outside because San Franciscans are too chickenshit to let the homeless touch the fruits and vegetables in the grocery stores. The Whole Foods on 8th and Market shut down 'for homeless reasons'"}
               </p>
               <p>
-                {"If I take a picture of the sign advertising 'DOUBLE YOUR FOOD STAMPS - SIGNED CAPITALISM' am I now a 'local reporter'? Does writing that the poor should be able to shop in fucking grocery stores make me Robin of Loxley and then I'll have fucked up homeless that like to do drugs around me trying to be all buddy buddy? You see how this level of manipulation and mind fuckery works. Frankly my dear, I'd just as soon watch the lot of you catch your comeuppance as I laugh while the world burns down."}
+                {"If I take a picture of the sandwich board advertising 'DOUBLE YOUR FOOD STAMPS - SIGNED CAPITALISM' am I now a 'local reporter'? Does writing that the poor should be able to shop in fucking grocery stores make me Robin of Loxley and then I'll have fucked up homeless that like to do drugs around me trying to be all buddy buddy? You see how this level of manipulation and mind fuckery works. Frankly my dear, I'd just as soon watch the lot of you catch your comeuppance as I laugh while the world burns down."}
               </p>
               <p>
                 {"You have a phone with a camera on it if you have thumbs. If you're too stupid to look, my forcing you to won't change your mind. I'd much rather write because then there's a barrier to entry to people who are too stupid to read. That's what I am, a dirty no good stinking academic fascist over here with my typewriter and $0. I'm just tired of people that are too stupid to exist, and people who are too smart not to treat them like shit. Despite what the druggie fuckups that think a t-shirt is a stand-in for a personality might have you believe, it is entirely possible to care about the war in Ukraine, poverty in the Middle East, fishing rights off the coast of ever-loving Burma!, and the fact that Next Door (the coding palace as opposed to the homeless shelter) is stationed right across from the Glide breadline on Taylor and Ellis. Because I know how to read a book."}
@@ -1169,4 +1159,55 @@ impl Component for Home {
 }
 
 impl Home{
+  fn apr13(&self, ctx: &Context<Self>) -> Html {
+    html!{
+      <>
+        <div>
+          <div class="timeheader">
+            {"Wed Apr 13 10:22M San Francisco - The Time is Now"}
+          </div>
+          <h3>
+            {"San Francisco Crime in The Tenderloin"}
+          </h3>
+          <p>
+            {"I wrote this piece in response to someone on Reddit and it was good enough that I'm cross posting it here."}
+          </p>
+          <a href={"https://www.reddit.com/r/sanfrancisco/comments/12kztwp/comment/jg4rnsw/?context=3"}>{"Here's the link to the reddit thread."}</a>{" and "}<a href={"https://www.sfchronicle.com/sf/article/survey-crime-san-francisco-17894081.php"}>{"here's the link to the article."}</a>
+          <p>
+            {"Yeah and do you think that crime is 'down' because there is less crime or because there are fewer arrests and prosecutions? The California penal system is overrun, the San Francisco PD is massively undermanned, and there are tents and squalor all over San Francisco. I'm homeless. I don't do drugs and I just want to find a job, read books, have enough to eat and a place to sleep. Live my life as best as I can. You know, normal stuff. I'm walking around looking at all these people everywhere that are flipping out on drugs or are passed out on the street."}
+          </p>
+          <p>
+            {"I've been lucky not to be involved in any crime, but it seriously freaks me out that everyone in SF is either vaping, injecting, snorting or some other form of narcotic. I've seen people in wheelchairs on drugs and doing wheelies in the street, transgender homeless who are pole dancing from traffic lights, people talking to their dogs as if they're human beings because they don't have anyone else to talk to. Homeless are dying in public on drugs. This is seriously fucked up and shouldn't be happening."}
+          </p>
+          <p>
+            {"Have you seen an old black man have to be revived with Narcan by a homeless outreach worker at 3 in the morning as the rain is coming down and then an ambulance comes up and takes him to the hospital? I have. What was worse was that I stood by and watched as these people did this as if it were normal and nothing to write home about. I just stood there and watched. This was during the December rains of last year. I don't know his name and I don't know if he's dead by now."}
+          </p>
+          <p>
+            {"He had a blanket with him. I tried to tell the ambulance workers that he might want his blanket when he wakes up because he would be cold. They ignored me like I wasn't there. A police officer said he helped a little old lady find her way home that night and so he was doing his part."}
+          </p>
+          <p>
+            {"It's not enough."}
+          </p>
+          <p>
+            {"I can get clean needles and tin foil, but I can't get aspirin and bandaids unless I do a several hour 'in-take'. Presumably this is so someone can check the health of the homeless person seeking services, but in reality what this is is a way of doing a headcount so the 'non-profit' can tell every other hospital, 'Don't treat this man! His government cheese is MINE!' It's just a shake down by other means. I've had to go to the hospital three times this week to test myself from overdose from second hand smoke of fentanyl while people are coming in having seizures and COVID shakes. The hospital on Divisidero and Gaery is a fucking warzone. While I was sitting in Sutter Health for five hours waiting on a drug test I could have done myself with a $40 dollar test from Walgreens I listened to the nurses talk about how excited they were about their trip to Malibu. That hospital visit most likely cost the government several thousand dollars."}
+          </p>
+          <p>
+            {"They denied me a drug screen. 0.2mg of fentanyl can kill someone."}
+          </p>
+          <p>
+            {"The San Francisco Fire Department is still waiting for the state to pay them $5,000 for sending a fire truck the last time I was sick. I still don't know the name of that old black man who was revived with Narcan at 3 in the morning during the December rains. They sent a fire 'van' that time. Did they need one? No. Did they need a fire truck for me? No. But society has decided that the rich won't pay taxes and so the only way to pay for the fire department is for them to defraud insurance companies."}
+          </p>
+          <p>
+            {"So thanks for the fire truck. You paid for it."}
+          </p>
+          <p>
+            {"Cartels are selling drugs in the Tenderloin to people who drive in and have money. You could set up a camera on the street and just record license plates of people who deal crack in open air drug markets. That's a fancy term for a formerly public sidewalk that's been taken over by a gang. That shouldn't happen. You could have the police walk up and down the street and arrest anyone on Tranq/Meth/Fentanyl - you know the drugs that make your body parts fall off and necrotize - or selling those drugs."}
+          </p>
+          <p>
+            {"You can't tell me that crime is down and make that make any sense. I've been to San Francisco before. It didn't used to be this way."}
+          </p>
+        </div>
+      </>
+    }
+  }
 }
