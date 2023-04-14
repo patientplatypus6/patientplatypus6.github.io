@@ -380,6 +380,7 @@ impl Component for Home {
               </p>
             </h1>   
 
+            {self.apr14(ctx)}
             {self.apr13(ctx)}
 
             <div>
@@ -1162,12 +1163,50 @@ impl Component for Home {
 }
 
 impl Home{
+  fn apr14(&self, ctx: &Context<Self>) -> Html {
+    html!{
+      <>
+        <div>
+          <div class="timeheader">
+            {"Wed Apr 14 8:59 San Francisco - The Time is Now"}
+          </div>
+          <h3>
+            {"Little Druggy Dipshits Don't Get A Vote"}
+          </h3>
+          <p>
+            {"I'm not my father. I'm me. And I'm angry."}
+          </p>
+          <p>
+            {"One of the psychological bullshit ways to fuck with someone is to have them switch between two different ideologies repeatedly until they get all turned around. I fucking hate behaviourist assholes. And children. Look at the traffic cameras over by Fisherman's Warf and watch the blacks play 'Joker's Motorcycle Gang' and doing wheelies for children, while I walk through clouds of marijuana smoke. Great. Or am I Superman because I'm telling on people when they drug me? Oh, let's have him be a reporter and yell about how he doesn't like the rich by showing him the rich be assholes! Oh, let's have him pretend to be rich while he fights crime! Isn't that hilarious, we can make someone that we think is a child follow the patterns of a fucking comic book."}
+          </p>
+          <p>
+            {"This isn't a contest. The rich in the $200,000 super car is as much a sad sack of shit as the guy in the gutter with a needle in his arm. As is your children that you don't want because you were scared of being alone. Walk down the street in San Francisco and count the people who aren't wearing a hat, sunglasses, with ear buds, with a face mask. Holding hands. It's See No Evil, Hear No Evil, Speak No Evil out there because people are scared shitless to see, hear, or breath around their fellows."}
+          </p>
+          <p>
+            {"I'm tired of the people who are on drugs or who are crossing their legs like they think they're wizards. It's like everyone in San Francisco read the Phaedrus and decided that they wanted to run away and join the circus. Oh, look everyone it's Batman! Or is it Superman? Or are you a fucking cunt? I haven't met a single person in the last year that wasn't trying to fuck someone over for money, sex or religion."}
+          </p>
+          <p>
+            {"The worst thing I can say I already have, because I don't have to. All I had to do was watch. My sister was too scared to speak to me when I came to their house hat in hand as a homeless man because I had no where else to go. Her husband drove me to a hotel and gave me $300 to go away. He suggested I rub dog parasite remover on my sores from a gas station. I've watched people kill each other over nothing in countries far away from me and in the cab ride across town I listened to some dick who thought his ticket out of Uber was Robin Hood. If crypto didn't solve your problems, will AI? There's nothing like a plague to show the world what kind of person someone is."}
+          </p>
+          <p>
+            {"I haven't fucked anyone. I haven't stolen. I haven't gotten rich. I've helped the poor. I've given money away. I've read books. I've jerked off. I've traveled around the country to ever major city looking for work. I've written and called all of you bastards."}
+          </p>
+          <p>
+            {"Homeless in the shelter make lip smacking noises at me because 'it's legal.' Because they think I act like a lawyer. News flash for retards - in my book if you haven't been starving to death in the last year you don't get a fucking vote. But yeah, let's drug people and then drive cars around them blasting ghetto bangers because. Because what? You don't have anything better to do? You want to re-enact a book to fuck with someone, or a movie, or some fucking thing?"}
+          </p>
+          <p>
+            {"Dog parasite remover for the sores all over my body from a gas station when I asked if I could sleep in their backyard while I looked for a job. I can't find a job because no one can afford my conscience."}
+          </p>
+        </div>
+      </>
+    }
+  }  
   fn apr13(&self, ctx: &Context<Self>) -> Html {
     html!{
       <>
         <div>
           <div class="timeheader">
-            {"Wed Apr 13 10:22M San Francisco - The Time is Now"}
+            {"Wed Apr 13 10:22PM San Francisco - The Time is Now"}
           </div>
           <h3>
             {"San Francisco Crime in The Tenderloin"}
