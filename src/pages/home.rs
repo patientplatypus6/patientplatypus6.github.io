@@ -387,6 +387,7 @@ impl Component for Home {
               </div>
             </h1>   
 
+            {self.apr15(ctx)}
             {self.apr14(ctx)}
             {self.apr13(ctx)}
 
@@ -1170,12 +1171,37 @@ impl Component for Home {
 }
 
 impl Home{
+  fn apr15(&self, ctx: &Context<Self>) -> Html {
+    html!{
+      <>
+        <div>
+          <div class="timeheader">
+            {"Sat Apr 15 12:53PM San Francisco - The Time is Now"}
+          </div>
+          <h3>
+            {"It's All Just Kabuki"}
+          </h3>
+          <p>
+            {"Here's some links to websites I like that some people on IRC told me about today. I'll include more as I find them. Now listening to Macroblank. Now reading As the Caged Bird Sings."}
+          </p>
+          <ul>
+            <li>
+              <a href={"http://sigbovik.org/2023/"}>{"http://sigbovik.org/2023/"}</a>
+            </li>
+            <li>
+              <a href={"https://www.exoticsilicon.com/"}>{"https://www.exoticsilicon.com/"}</a>
+            </li>
+          </ul>
+        </div>
+      </>
+    }
+  }
   fn apr14(&self, ctx: &Context<Self>) -> Html {
     html!{
       <>
         <div>
           <div class="timeheader">
-            {"Wed Apr 14 8:59 San Francisco - The Time is Now"}
+            {"Wed Apr 14 8:59PM San Francisco - The Time is Now"}
           </div>
           <h3>
             {"Little Druggy Dipshits Don't Get A Vote"}
