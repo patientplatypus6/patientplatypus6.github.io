@@ -19,6 +19,9 @@ use stdweb::js;
 use chrono::prelude::*;
 use yew_canvas::Canvas;
 
+// use yew_router::history::{AnyHistory, History, MemoryHistory};
+use yew_router::history::History;
+
 use crate::routes::routes::Route;
 use yew_router::prelude::*;
 
@@ -358,7 +361,7 @@ impl Component for Flashlinks {
 
           .blueprint-button {
             display: inline-block;
-            width: calc(90% - 16px); 
+            width: calc(100% - 27px); 
             padding: 4px 8px;
             font-size: 14px;
             font-weight: 600;
@@ -367,6 +370,7 @@ impl Component for Flashlinks {
             white-space: nowrap;
             vertical-align: middle;
             cursor: pointer;
+            margin-bottom: 5px;
             user-select: none;
             border-radius: 3px;
             border: none;
@@ -434,15 +438,19 @@ impl Component for Flashlinks {
               {"Display blog posts by month: "}
             </p>
 
-            <Link<Route> to={Route::HomeMonth { month: "april".to_string()}}>
-              // <div onclick={ctx.link().callback(|_| Msg::ForceUpdate(e))} class="blueprint-button">
+            <Link<Route> to={Route::HomeMonth{ month: "".to_string()}}>
+              <div class="blueprint-button">
+                {"All Time"}
+              </div>
+            </Link<Route>>
+
+            <Link<Route> to={Route::HomeMonth{ month: "april".to_string()}}>
               <div class="blueprint-button">
                 {"April, 2023"}
               </div>
             </Link<Route>>
-            
-            <Link<Route> to={Route::HomeMonth{month: "march".to_string()}}>
-              // <div onclick={ctx.link().callback(|_| Msg::ForceUpdate(e))} class="blueprint-button">
+
+             <Link<Route> to={Route::HomeMonth{month: "march".to_string()}}>
               <div class="blueprint-button">
                 {"March, 2023"}
               </div>

@@ -26,32 +26,43 @@ use super::super::components::flashlinks::Flashlinks;
 use super::super::components::header::Header;
 use super::super::components::navlinks::Navlinks;
 
-#[derive(Clone, PartialEq, Properties)]
+// #[derive(Clone, PartialEq, Properties)]
 pub struct Home{
-  pub month: String
+  pub month: String,
+  _listener: LocationHandle,
 }
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Homeprops{
   pub month: String,
+  // pub history: History
 }
 
 pub enum Msg {
   SearchTerm((String)),
+  PageUpdated(Location)
   // ForceUpdate
 }
+
+// fn current_page(ctx: &Context<PostList>) -> u64 {
+//   let location = ctx.link().location().unwrap();
+//   location.query::<PageQuery>().map(|it| it.page).unwrap_or(1)
+// }
 
 impl Component for Home {
   type Message = Msg;
   type Properties = Homeprops;
 
-
-
   fn create(ctx: &Context<Self>) -> Self {
     log::info!("inside the create function for home; ");
+    let link = ctx.link().clone();
+    let listener = ctx.link()
+    .add_location_listener(link.callback(move |e| Msg::PageUpdated(e)))
+    .unwrap();
 
     Self{
-      month: ctx.props().month.clone()
+      month: ctx.props().month.clone(),
+      _listener: listener,
     }
   }
 
@@ -59,19 +70,16 @@ impl Component for Home {
   }
 
   fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
-    // let location = self.window.location();
-    // let href = location.href().unwrap();
-    // log::info!("value of href: {:?}", href.clone());
-    // if href.clone() != self.url {
-    //     self.url = href;
-    // }
     match msg{
       Msg::SearchTerm(e)=>{
         log::info!("Inside SearchTerm in home and value; {:?}", e);
       }, 
-      // Msg::ForceUpdate => {
-      //   log::info!("Inside the force update handler");
-      // }
+      Msg::PageUpdated(e) => {
+        log::info!("Inside the page updated handler!");
+        log::info!("Value of self.month: {:?}", self.month.clone());
+        log::info!("value of location: {:?}", e.path().to_string());
+        self.month = e.path().to_string();
+      }
     }
     true
   }
@@ -382,9 +390,8 @@ impl Component for Home {
           <div class="contentcontainer">
 
             <Header/>
-            {self.month.clone()}
             {
-              if self.month.clone() == "april".to_string(){
+              if self.month.clone() == "/april".to_string(){
                 html!{
                   <>
                     {self.apr17(ctx)}
@@ -406,7 +413,7 @@ impl Component for Home {
                     {self.apr1(ctx)}
                   </>
                 }
-              }else if self.month.clone() == "march".to_string(){
+              }else if self.month.clone() == "/march".to_string(){
                 html!{
                   <>
                     {self.mar31(ctx)}
