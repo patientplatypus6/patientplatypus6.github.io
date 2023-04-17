@@ -1087,7 +1087,7 @@ impl Home{
       <>
         <div>
           <div class="timeheader">
-            {"Sat Apr 16 6:19PM San Francisco - The Time is Now"}
+            {"Sun Apr 16 6:19PM San Francisco - The Time is Now"}
           </div>
           <h3>
             {"I Have the Right to Program Without Being Drugged"}
