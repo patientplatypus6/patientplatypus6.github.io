@@ -470,6 +470,9 @@ impl Home{
           <p>
             {"Early morning - I'm planning on some updates to the website today, we'll see how far I get."}
           </p>
+          <p>
+            {"Ok, I componetized a bunch of stuff which doesn't show much on the blog UI (the navlinks and the header), and cleaned up how the Home page blogs are rendered. The biggest change was that I managed to put in a sidebar for accessing the blog posts by month. There's a search bar which currently doesn't do anything, but that will have to wait until tomorrow."}
+          </p>
         </div>
       </>
     }
