@@ -387,6 +387,7 @@ impl Component for Home {
               </div>
             </h1>   
 
+            {self.apr16(ctx)}
             {self.apr15(ctx)}
             {self.apr14(ctx)}
             {self.apr13(ctx)}
@@ -1171,6 +1172,23 @@ impl Component for Home {
 }
 
 impl Home{
+  fn apr16(&self, ctx: &Context<Self>) -> Html {
+    html!{
+      <>
+        <div>
+          <div class="timeheader">
+            {"Sat Apr 16 6:19PM San Francisco - The Time is Now"}
+          </div>
+          <h3>
+            {"I Have the Right to Program Without Being Drugged"}
+          </h3>
+          <p>
+            {"What it says on the tin. I have the right to program without being drugged or I will continue to inform on everyone here at the shelter. I was threatened twice today - once with physcial violence because I told someone to stop talking to me when I didn't want to share the time of day, and the second time that I 'should' be getting high. Fuck you and the horse you rode in on, what I do or don't do with my body isn't any of your fucking business. It is my business if your getting high AFFECTS ME. I was drugged again, at the fucking library of all places, and had to go to the hospital. The cops were completely ineffectual. 'Oh, someone must have been partying and got it on their clothes.' Oh, OK. It's completely copacetic for someone to have drugs on their clothing that can kill someone or make them ill when they walk by. 0.2mg of fentanyl can kill someone and these people are wandering around the public library because we treat it as a daycare center for criminals rather than, you know, "}<a href={"https://www.joannejacobs.com/post/algebra-for-none-fails-in-san-francisco"}>{"a place of learning."}</a>{"  In the meantime, "}<a href={"https://www.cnn.com/2023/04/16/us/dadeville-alabama-mass-shooting/index.html"}>{"ths happened."}</a>{" Ah, business a usual I said to myself and spent the rest of the day sleeping the sleep of the just. I will continue to write and call you all bastards until I die."}
+          </p>
+        </div>
+      </>
+    }
+  }
   fn apr15(&self, ctx: &Context<Self>) -> Html {
     html!{
       <>
