@@ -41,7 +41,16 @@ pub fn App() -> Html {
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => html! { < Home /> },
+        Route::Home => {
+            html! { 
+                < Home month={"".to_string()}/> 
+            }
+        },
+        Route::HomeMonth {month} => {
+            html! { 
+                < Home month={month}/> 
+            }
+        },
         Route::Links => html! { < Links /> },
         Route::About => html! { < About /> },
         Route::Map => html! { < Map /> },

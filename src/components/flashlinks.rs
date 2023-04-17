@@ -25,16 +25,28 @@ use yew_router::prelude::*;
 #[derive(Clone, PartialEq, Properties)]
 pub struct Flashlinks{
   is_mobile: bool, 
-  open_modal: bool
+  open_modal: bool, 
+  search_term: String,
+  // forceupdate: Callback<()>
+  // search_term_handler: Callback<((String))>,
+}
+
+
+#[derive(Clone, PartialEq, Properties)]
+pub struct Flashlinksprops {
+  // pub forceupdate: Callback<()>
+  // pub search_term_handler: Callback<((String))>,
 }
 
 pub enum Msg {
-  ModalToggle
+  ModalToggle,
+  // ForceUpdate,
+  UpdateSearchTerm(InputEvent)
 }
 
 impl Component for Flashlinks {
   type Message = Msg;
-  type Properties = ();
+  type Properties = Flashlinksprops;
 
 
   fn create(ctx: &Context<Self>) -> Self {
@@ -43,7 +55,10 @@ impl Component for Flashlinks {
     };
     Self { 
       is_mobile: is_mobile == true,
-      open_modal: false
+      open_modal: false, 
+      search_term: "".to_string(),
+      // forceupdate: ctx.props().forceupdate.clone()
+      // search_term_handler: ctx.props().search_term_handler.clone()
     }
   }
 
@@ -60,6 +75,20 @@ impl Component for Flashlinks {
           self.open_modal = true;
         }
         log::info!("after toggling open modal and value: {:?}", self.open_modal);
+      },
+      // Msg::ForceUpdate => {
+      //   ctx.props().forceupdate.emit(());
+      // }
+      Msg::UpdateSearchTerm(e)=>{
+        let letter = e.data().unwrap_or("backspace".to_string()).to_string();
+        if letter != "backspace"{
+          self.search_term = self.search_term.to_string() + letter.as_str();
+        }else{
+          let teststr = &self.search_term[0..&self.search_term.len() - 1];
+          self.search_term = teststr.to_string();
+        }
+        log::info!("value of self.search_term: {:?}", self.search_term);
+        // ctx.props().search_term_handler.emit((self.search_term));
       }
     }
     true
@@ -396,6 +425,38 @@ impl Component for Flashlinks {
             >
               {"Learn More"}
             </div>
+          </div>
+          <div style="
+            display: inline-block; background: black; color: lightgreen; font-weight: bold;
+            width: 100%; margin-top: 5px; font-size: 10px; text-align: left; padding-left: 5px;
+          ">
+            <p>
+              {"Display blog posts by month: "}
+            </p>
+
+            <Link<Route> to={Route::HomeMonth { month: "april".to_string()}}>
+              // <div onclick={ctx.link().callback(|_| Msg::ForceUpdate(e))} class="blueprint-button">
+              <div class="blueprint-button">
+                {"April, 2023"}
+              </div>
+            </Link<Route>>
+            
+            <Link<Route> to={Route::HomeMonth{month: "march".to_string()}}>
+              // <div onclick={ctx.link().callback(|_| Msg::ForceUpdate(e))} class="blueprint-button">
+              <div class="blueprint-button">
+                {"March, 2023"}
+              </div>
+            </Link<Route>>
+            
+            <p>
+              {"Input a search term to search the blog: "}
+            </p>
+            <input type="text" 
+              style="margin-bottom: 5px; width: calc(100% - 22px); padding-right: 5px;"
+              value={self.search_term.clone()}
+              autocomplete="off"
+              oninput={ctx.link().callback(|e| Msg::UpdateSearchTerm(e))}
+            />
           </div>
           <div class="picturemapcontainer">
             <Link<Route> to={Route::Map}>

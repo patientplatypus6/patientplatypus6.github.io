@@ -23,6 +23,9 @@ use crate::routes::routes::Route;
 use yew_router::prelude::*;
 
 use super::super::super::components::flashlinksbooks::Flashlinks;
+use super::super::super::components::headerbooks::Header;
+use super::super::super::components::navlinksbooks::Navlinks;
+
 use super::super::super::util::books;
 use super::super::super::util::books::BookIDS;
 
@@ -280,43 +283,12 @@ impl Component for Philosophy {
         </style>
         <div class="main">
           <Flashlinks/>
-          <div style="position: absolute; display: inline-block; top: 0; left: 0; width: calc(20vw - 10px);">
-            <div class="navmenu">
-              <br/>
-              <Link<Route> to={Route::Home}>
-                <div class="blueprint-button">
-                  {"Home"}
-                </div>
-              </Link<Route>>
-              <br/>
-              <br/>
-              <Link<Route> to={Route::Links}>
-                <div class="blueprint-button">
-                  {"Links"}
-                </div>
-              </Link<Route>>
-              <br/>
-              <br/>
-              <Link<Route> to={Route::About}>
-                <div class="blueprint-button">
-                  {"About"}
-                </div>
-              </Link<Route>>
-              <br/>
-              <br/>
-              <br/>
-            </div>
-          </div>
+          <Navlinks/>
           
           <div class="octopus"/>
 
           <div class="contentcontainer">
-            <h1 class="header1">
-              <img loading="lazy" src={"static/title.png"} class="imagetag"/>
-              <p style="color: white; background: black; font-size: 0.8rem; padding: 5px; margin-bottom: 0; margin-top: -20px; font-weight: 900;">
-                {"Me? I'm the idiot child of technology's conscience. Who the fuck are you?"}
-              </p>
-            </h1>    
+            <Header/>
             <div>
               <div class="timeheader">
                 {"Philosophy Books"}
