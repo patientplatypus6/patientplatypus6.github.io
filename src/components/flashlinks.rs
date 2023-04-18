@@ -19,6 +19,9 @@ use stdweb::js;
 use chrono::prelude::*;
 use yew_canvas::Canvas;
 
+use std::fs::File;
+use std::io::prelude::*;
+
 // use yew_router::history::{AnyHistory, History, MemoryHistory};
 use yew_router::history::History;
 
@@ -29,22 +32,27 @@ use yew_router::prelude::*;
 //   log::info!("inside the the test_fn");
 // }
 
+  // log::info!("inside the get_blog_html folder");
+  // // let resp = reqwest::get("patientplatypus6.github.io")
+  // let resp = reqwest::get("http://localhost:8080/")
+  // .await
+  // .map_err(|err| {
+  //     log::info!("there was an error: {:?}", err);
+  // }).expect("there was an error");
+  // let html = resp
+  //   .text()
+  //   .await
+  //   .map_err(|err| {
+  //     log::info!("there was an error: {:?}", err);
+  //   }).expect("there was an error");
+  // log::info!("value of html: {:?}", html.to_string());
+  // html
+
 async fn get_blog_html() -> String {
-  log::info!("inside the get_blog_html folder");
-  // let resp = reqwest::get("patientplatypus6.github.io")
-  let resp = reqwest::get("http://localhost:8080/")
-  .await
-  .map_err(|err| {
-      log::info!("there was an error: {:?}", err);
-  }).expect("there was an error");
-  let html = resp
-    .text()
-    .await
-    .map_err(|err| {
-      log::info!("there was an error: {:?}", err);
-    }).expect("there was an error");
-  log::info!("value of html: {:?}", html.to_string());
-  html
+  let mut file = File::open("path/to/file.rs").expect("open file failed");
+  let mut contents = String::new();
+  file.read_to_string(&mut contents).expect("read file failed");
+  contents
 }
 
 #[derive(Clone, PartialEq, Properties)]
@@ -89,10 +97,7 @@ impl Component for Flashlinks {
 
   fn rendered(&mut self, ctx: &Context<Self>, first_render: bool) {
     if first_render{
-      spawn_local(async move {
-        let returnhtml = get_blog_html().await;
-        log::info!("value of returnhtml: {:?}", returnhtml);
-      });
+
     }
   }
 
@@ -106,9 +111,6 @@ impl Component for Flashlinks {
         }
         log::info!("after toggling open modal and value: {:?}", self.open_modal);
       },
-      // Msg::ForceUpdate => {
-      //   ctx.props().forceupdate.emit(());
-      // }
       Msg::UpdateSearchTerm(e)=>{
         let letter = e.data().unwrap_or("backspace".to_string()).to_string();
         if letter != "backspace"{
@@ -118,16 +120,10 @@ impl Component for Flashlinks {
           self.search_term = teststr.to_string();
         }
         log::info!("value of self.search_term: {:?}", self.search_term);
-        // test_fn();
-        // let returnhtml = get_blog_html().await;
-        // log::info!("value of returnhtml: {:?}", returnhtml);
-        // let handle = std::thread::spawn(|| {
-        //   let returnhtml = get_blog_html().await;
-        //   log::info!("value of returnhtml: {:?}", returnhtml);
-        // });
-        // handle.join().unwrap();
-
-        // ctx.props().search_term_handler.emit((self.search_term));
+        spawn_local(async move {
+          let returnhtml = get_blog_html().await;
+          log::info!("value of returnhtml: {:?}", returnhtml);
+        });
       }
     }
     true

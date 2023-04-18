@@ -21,10 +21,16 @@ use yew_canvas::Canvas;
 
 use crate::routes::routes::Route;
 use yew_router::prelude::*;
+use yew::Html;
+use yew::AttrValue;
+use yew::virtual_dom::vnode::VNode;
+
 
 use super::super::components::flashlinks::Flashlinks;
 use super::super::components::header::Header;
 use super::super::components::navlinks::Navlinks;
+use super::super::util::blogs;
+use super::super::util::blogs::Blog;
 
 // #[derive(Clone, PartialEq, Properties)]
 pub struct Home{
@@ -387,10 +393,13 @@ impl Component for Home {
           <div class="contentcontainer">
 
             <Header/>
+
+
             {
               if self.month.clone() == "/april".to_string(){
                 html!{
                   <>
+                    {self.apr18(ctx)}
                     {self.apr17(ctx)}
                     {self.apr16(ctx)}
                     {self.apr15(ctx)}
@@ -421,6 +430,7 @@ impl Component for Home {
               }else{
                 html!{
                   <>
+                    {self.apr18(ctx)}
                     {self.apr17(ctx)}
                     {self.apr16(ctx)}
                     {self.apr15(ctx)}
@@ -454,6 +464,32 @@ impl Component for Home {
 }
 
 impl Home{
+
+  fn blog_formatting(&self, ctx: &Context<Self>, blog: Blog) -> Html {
+    html!{
+      <>
+        <div class="timeheader">
+          { Html::from_html_unchecked(AttrValue::from(blog.date.clone()))} {" "}
+          { Html::from_html_unchecked(AttrValue::from(blog.time.clone()))} {" "}
+          { Html::from_html_unchecked(AttrValue::from(blog.location.clone()))}
+          {" - The Time Is Now"}
+        </div>
+        <h3>
+          { Html::from_html_unchecked(AttrValue::from(blog.title.clone()))}
+        </h3>
+        { Html::from_html_unchecked(AttrValue::from(blog.paragraphs.clone())) }
+      </>
+    }
+  }
+
+  fn apr18(&self, ctx: &Context<Self>) -> Html {
+
+    let blogs = blogs::blogs().clone();
+    let blogindex = blogs::find_index_by_time_date(&blogs.clone(), "<span>1:31PM</span>", "<span>Tue Apr 18</span>").unwrap();
+    let blog = blogs[blogindex];
+    html!{{self.blog_formatting(ctx, blog.clone())}}
+  }
+  
   fn apr17(&self, ctx: &Context<Self>) -> Html {
     html!{
       <>
