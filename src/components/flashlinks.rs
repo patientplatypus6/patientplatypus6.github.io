@@ -25,6 +25,28 @@ use yew_router::history::History;
 use crate::routes::routes::Route;
 use yew_router::prelude::*;
 
+// fn test_fn(){
+//   log::info!("inside the the test_fn");
+// }
+
+async fn get_blog_html() -> String {
+  log::info!("inside the get_blog_html folder");
+  // let resp = reqwest::get("patientplatypus6.github.io")
+  let resp = reqwest::get("http://localhost:8080/")
+  .await
+  .map_err(|err| {
+      log::info!("there was an error: {:?}", err);
+  }).expect("there was an error");
+  let html = resp
+    .text()
+    .await
+    .map_err(|err| {
+      log::info!("there was an error: {:?}", err);
+    }).expect("there was an error");
+  log::info!("value of html: {:?}", html.to_string());
+  html
+}
+
 #[derive(Clone, PartialEq, Properties)]
 pub struct Flashlinks{
   is_mobile: bool, 
@@ -66,7 +88,12 @@ impl Component for Flashlinks {
   }
 
   fn rendered(&mut self, ctx: &Context<Self>, first_render: bool) {
-
+    if first_render{
+      spawn_local(async move {
+        let returnhtml = get_blog_html().await;
+        log::info!("value of returnhtml: {:?}", returnhtml);
+      });
+    }
   }
 
   fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
@@ -91,6 +118,15 @@ impl Component for Flashlinks {
           self.search_term = teststr.to_string();
         }
         log::info!("value of self.search_term: {:?}", self.search_term);
+        // test_fn();
+        // let returnhtml = get_blog_html().await;
+        // log::info!("value of returnhtml: {:?}", returnhtml);
+        // let handle = std::thread::spawn(|| {
+        //   let returnhtml = get_blog_html().await;
+        //   log::info!("value of returnhtml: {:?}", returnhtml);
+        // });
+        // handle.join().unwrap();
+
         // ctx.props().search_term_handler.emit((self.search_term));
       }
     }

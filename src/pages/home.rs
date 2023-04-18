@@ -379,10 +379,7 @@ impl Component for Home {
           "}
         </style>
         <div class="main">
-          <Flashlinks
-            // forceupdate = {ctx.link().callback(|_| Msg::ForceUpdate)}
-            // search_term_handler={ctx.link().callback(|e| Msg::SearchTerm(e))}
-          />
+          <Flashlinks/>
           <Navlinks/>
           
           <div class="octopus"/>
