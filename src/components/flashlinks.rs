@@ -28,52 +28,23 @@ use yew_router::history::History;
 use crate::routes::routes::Route;
 use yew_router::prelude::*;
 
-// fn test_fn(){
-//   log::info!("inside the the test_fn");
-// }
-
-  // log::info!("inside the get_blog_html folder");
-  // // let resp = reqwest::get("patientplatypus6.github.io")
-  // let resp = reqwest::get("http://localhost:8080/")
-  // .await
-  // .map_err(|err| {
-  //     log::info!("there was an error: {:?}", err);
-  // }).expect("there was an error");
-  // let html = resp
-  //   .text()
-  //   .await
-  //   .map_err(|err| {
-  //     log::info!("there was an error: {:?}", err);
-  //   }).expect("there was an error");
-  // log::info!("value of html: {:?}", html.to_string());
-  // html
-
-async fn get_blog_html() -> String {
-  let mut file = File::open("path/to/file.rs").expect("open file failed");
-  let mut contents = String::new();
-  file.read_to_string(&mut contents).expect("read file failed");
-  contents
-}
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Flashlinks{
   is_mobile: bool, 
   open_modal: bool, 
   search_term: String,
-  // forceupdate: Callback<()>
-  // search_term_handler: Callback<((String))>,
+  pub search_handler: Callback<(String)>
 }
 
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Flashlinksprops {
-  // pub forceupdate: Callback<()>
-  // pub search_term_handler: Callback<((String))>,
+  pub search_handler: Callback<(String)>
 }
 
 pub enum Msg {
   ModalToggle,
-  // ForceUpdate,
   UpdateSearchTerm(InputEvent)
 }
 
@@ -90,8 +61,7 @@ impl Component for Flashlinks {
       is_mobile: is_mobile == true,
       open_modal: false, 
       search_term: "".to_string(),
-      // forceupdate: ctx.props().forceupdate.clone()
-      // search_term_handler: ctx.props().search_term_handler.clone()
+      search_handler: ctx.props().search_handler.clone()
     }
   }
 
@@ -120,10 +90,7 @@ impl Component for Flashlinks {
           self.search_term = teststr.to_string();
         }
         log::info!("value of self.search_term: {:?}", self.search_term);
-        spawn_local(async move {
-          let returnhtml = get_blog_html().await;
-          log::info!("value of returnhtml: {:?}", returnhtml);
-        });
+        ctx.props().search_handler.emit(self.search_term.clone())
       }
     }
     true
@@ -491,12 +458,14 @@ impl Component for Flashlinks {
             <p>
               {"Input a search term to search the blog: "}
             </p>
-            <input type="text" 
-              style="margin-bottom: 5px; width: calc(100% - 22px); padding-right: 5px;"
-              value={self.search_term.clone()}
-              autocomplete="off"
-              oninput={ctx.link().callback(|e| Msg::UpdateSearchTerm(e))}
-            />
+            <Link<Route> to={Route::HomeMonth{ month: "".to_string()}}>
+              <input type="text" 
+                style="margin-bottom: 5px; width: calc(100% - 22px); padding-right: 5px;"
+                value={self.search_term.clone()}
+                autocomplete="off"
+                oninput={ctx.link().callback(|e| Msg::UpdateSearchTerm(e))}
+              />
+            </Link<Route>>
           </div>
           <div class="picturemapcontainer">
             <Link<Route> to={Route::Map}>

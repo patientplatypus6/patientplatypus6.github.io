@@ -32,7 +32,7 @@ pub struct About{
 }
 
 pub enum Msg {
-
+  SearchHandler(String),
 }
 
 impl Component for About {
@@ -49,6 +49,11 @@ impl Component for About {
   }
 
   fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
+    match msg{
+      Msg::SearchHandler(e)=>{
+        log::info!("Inside SearchTerm in home and value; {:?}", e);
+      }, 
+    }
     true
   }
 
@@ -278,7 +283,9 @@ impl Component for About {
         "}
         </style>
         <div class="main">
-          <Flashlinks/>
+          <Flashlinks
+            search_handler = {ctx.link().callback(|data| Msg::SearchHandler(data))}
+          />
           <Navlinks/>
         
           <div class="octopus"/> 

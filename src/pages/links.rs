@@ -25,6 +25,7 @@ use yew_router::prelude::*;
 use super::super::components::flashlinks::Flashlinks;
 use super::super::components::header::Header;
 use super::super::components::navlinks::Navlinks;
+use super::super::util::links;
 
 
 #[derive(Clone, PartialEq, Properties)]
@@ -33,7 +34,7 @@ pub struct Links{
 }
 
 pub enum Msg {
-  ModalToggle
+  SearchHandler(String)
 }
 
 impl Component for Links {
@@ -42,7 +43,6 @@ impl Component for Links {
 
 
   fn create(ctx: &Context<Self>) -> Self {
-
     Self { 
 
     }
@@ -53,6 +53,11 @@ impl Component for Links {
   }
 
   fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
+    match msg{
+      Msg::SearchHandler(e)=>{
+        log::info!("Inside SearchTerm in home and value; {:?}", e);
+      }, 
+    }
     true
   }
 
@@ -279,10 +284,31 @@ impl Component for Links {
                 transition: 0.1s;
               }
 
+              table, th {
+                border: 3px solid lightgreen;
+                background: rgba(0,200,0,0.2);
+              }
+
+              td{
+                padding: 5px;
+              }
+
+              th{
+                padding: 5px; 
+                background: rgba(0,0,200,0.2);
+              }
+
+              tr{ 
+                padding: 5px;
+                background: rgba(0,200,0,0.2);
+              }
+
           "}
         </style>
         <div class="main">
-          <Flashlinks/>
+          <Flashlinks
+            search_handler = {ctx.link().callback(|data| Msg::SearchHandler(data))}
+          />
           <Navlinks/>
           
           <div class="octopus"/>
@@ -298,50 +324,7 @@ impl Component for Links {
                   {"Here's a shit unordered list of the links I've used so far. I'll unfuck this later. Enjoy!"}
                 </p>
               </div>
-              <ul>  
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=e2CliA8PuRM&ab_channel=BronxRadioLab"}>{"religion"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.lingscars.com/"}>{"as this asshole"}</a>
-                </li>
-                <li>
-                  <a href={"https://news.ycombinator.com"}>{"news aggregation website"}</a>
-                </li>
-                <li>
-                  <a href={"https://ohadravid.github.io/posts/2023-03-rusty-python/"}>{"this guy"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.vanityfair.com/news/2017/06/neal-stephenson-metaverse-snow-crash-silicon-valley-virtual-reality"}>{"In the future we are all gargoyles"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.gamespot.com/articles/saints-row-iv-developers-respond-to-dildo-weapon-criticisms/1100-6412418/"}>{"beat someone to death with a dildo"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.polarsignals.com/blog/posts/2023/03/28/how-to-read-icicle-and-flame-graphs/"}>{"flame charts"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.wired.com/story/brandon-sanderson-is-your-god/"}>{"dipshit with a sword"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=5VtDM5jicRQ"}>{"today was a good day"}</a>
-                </li>
-                <li>
-                  <a href={"https://sfgov.org/mod/sites/default/files/FileCenter/Documents/2176-Sidewalk%20Landscape%20with%20SIRP.pdf"}>{"According to Article 15, Section 706 of the Public Works Code"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=9nWAic0lHVI&embeds_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_origin=https%3A%2F%2Fwww.bing.com&feature=emb_logo&ab_channel=CNN"}>{"this guy"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=3L4YrGaR8E4&ab_channel=RATMVEVO"}>{"Bulls on Parade"}</a>
-                </li>
-                <li>
-                  <a href={"https://wilwheaton.net/2023/03/the-library-is-a-safe-place/"}>{"That guy from Star Trek"}</a>
-                </li>
-                <li>
-                  <a href={"https://www.youtube.com/watch?v=7Pq-S557XQU&ab_channel=CGPGrey"}>{"Humans Need Not Apply"}</a>
-                </li>
-              </ul>
+              {self.linklist(ctx)}
             </div>
           </div>
         </div>
@@ -351,5 +334,47 @@ impl Component for Links {
 }
 
 impl Links{
-
+  fn linklist(&self, ctx: &Context<Self>) -> Html {
+    let linksdisp = links::links().clone();
+    html!{
+      <>
+        <table>
+        <th>
+          {"Category"}
+        </th>
+        <th>
+          {"Tagline"}
+        </th>
+        <th>
+          {"Notes"}
+        </th>
+        <th>
+          {"Link"}
+        </th>
+          {
+            for linksdisp.iter().enumerate().map(|(i, link)| {
+              html!{
+                <>
+                  <tr>
+                    <td>
+                      {link.clone().category}
+                    </td>
+                    <td>
+                      {link.clone().tagline}
+                    </td>
+                    <td>
+                      {link.clone().notes}
+                    </td>
+                    <td>
+                      <a href={link.clone().href}>{link.clone().href}</a>
+                    </td>
+                  </tr>
+                </>
+              }
+            })
+          }
+        </table>
+      </>
+    }
+  }
 }

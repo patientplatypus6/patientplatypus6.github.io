@@ -32,7 +32,7 @@ pub struct Wall{
 }
 
 pub enum Msg {
-  ModalToggle
+  SearchHandler(String),
 }
 
 impl Component for Wall {
@@ -52,6 +52,11 @@ impl Component for Wall {
   }
 
   fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
+    match msg {
+      Msg::SearchHandler(e)=>{
+        log::info!("Inside SearchTerm in home and value; {:?}", e);
+      }, 
+    }
     true
   }
 
@@ -281,7 +286,9 @@ impl Component for Wall {
           "}
         </style>
         <div class="main">
-          <Flashlinks/>
+          <Flashlinks
+            search_handler = {ctx.link().callback(|data| Msg::SearchHandler(data))}
+          />
           <Navlinks/>
           
           <div class="octopus"/>
