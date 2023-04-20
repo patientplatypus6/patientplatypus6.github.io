@@ -4,3 +4,6 @@ pub mod header;
 pub mod headerbooks;
 pub mod navlinks;
 pub mod navlinksbooks;
+pub mod flashlinksblog;
+pub mod headerblog;
+pub mod navlinksblog;

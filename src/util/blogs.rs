@@ -8,6 +8,7 @@ pub struct Blog{
   pub date: &'static str, 
   pub location: &'static str, 
   pub title: &'static str, 
+  pub route: &'static str,
   pub paragraphs: String
 }
 
@@ -49,6 +50,7 @@ pub fn find_substring(blog_vec: &Vec<Blog>, substring: &str) -> Vec<Blog>{
             date: editblog.date.clone(),
             location: editblog.location.clone(),
             title: editblog.title.clone(),
+            route: editblog.route.clone(),
             paragraphs: newparagraphs.clone()
           }
         )
@@ -56,6 +58,24 @@ pub fn find_substring(blog_vec: &Vec<Blog>, substring: &str) -> Vec<Blog>{
     }
   }
   return returnblogvec;
+}
+
+pub fn return_xml(blog_vec: &Vec<Blog>) -> String{
+  let mut xml = r###"<?xml version="1.0" encoding="UTF-8" ?>
+  <rss version="2.0">
+  <channel>"###.to_string();
+
+  for (i, blog) in blog_vec.iter().enumerate() {
+    let appendstring = r###"<item>
+    <title>"###.to_string() + blog.title.clone() + r###"</title>
+    <link>http://patientplatypus6.github.io"### + blog.route.clone() + r###"</link>
+    <description> What it says on the tin </description>
+    </item>"###;
+    xml = xml + appendstring.as_str();
+  }
+
+  xml = xml + r###"</channel></rss>"###;
+  xml
 }
 
 pub fn find_index_by_time_date(blog_vec: &Vec<Blog>, time_to_find: &str, date_to_find: &str) -> Option<usize> {
@@ -67,6 +87,22 @@ pub fn find_index_by_time_date(blog_vec: &Vec<Blog>, time_to_find: &str, date_to
   None
 }
 
+pub fn find_blog_by_route(blog_vec: &Vec<Blog>, route: &str) -> Blog {
+  for (i, blog) in blog_vec.iter().enumerate() {
+    if blog.route == route {
+      return blog.clone()
+    }
+  }
+  Blog{
+    date: r###"ERROR"###,
+    time: r###"ERROR"###,
+    location: r###"ERROR"###,
+    title: r###"ERROR"###,
+    route: r###"ERROR"###,
+    paragraphs: r###"ERROR"###.to_string(),
+  }
+}
+
 pub fn blogs() -> Vec<Blog> {
   let mut returnblogs = vec![];
 
@@ -76,6 +112,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>2:12PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Search Function Operational</span>"###,
+      route: r###"/april/19/212pm"###,
       paragraphs: r###"
         <p>
           The search function is now working. It highlights the search term as you type and filters the blogs. The only issue is that it also does that with the links and image tags! So if you search for 'img' you'll make the image tag disappear and the image tag highlight. Blah. The way to fix this is to find all the image and anchor tags, take them out with regex, do the search, and then put them back in. I don't know that I can be assed at the moment - I might fix this later if I care. In the meantime I finished putting all the blogs and links into structs and also cleaned up how the links look. I'll work on going through the blog adding all the links to the links page and then do something with filtering and searching through links tomorrow. All for now.
@@ -90,6 +127,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>1:31PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>More Work</span>"###,
+      route: r###"/april/18/131pm"###,
       paragraphs: r###"
         <p>I'm working on a new blogging system. Or rather saving the data in a new way.</p>
         <p>This is a test picture of a kitten.</p>
@@ -107,6 +145,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>6:19PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Updates to the Website</span>"###,
+      route: r###"/april/17/619pm"###,
       paragraphs: r###"
         <p>
           Early morning - I'm planning on some updates to the website today, we'll see how far I get.
@@ -124,6 +163,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>6:19PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>I Have the Right to Program Without Being Drugged</span>"###,
+      route: r###"/april/16/619pm"###,
       paragraphs: r###"
         <p>
           What it says on the tin. I have the right to program without being drugged or I will continue to inform on everyone here at the shelter. I was threatened twice today - once with physcial violence because I told someone to stop talking to me when I didn't want to share the time of day, and the second time that I 'should' be getting high. Fuck you and the horse you rode in on, what I do or don't do with my body isn't any of your fucking business. It is my business if your getting high AFFECTS ME. I was drugged again, at the fucking library of all places, and had to go to the hospital. The cops were completely ineffectual. 'Oh, someone must have been partying and got it on their clothes.' Oh, OK. It's completely copacetic for someone to have drugs on their clothing that can kill someone or make them ill when they walk by. 0.2mg of fentanyl can kill someone and these people are wandering around the public library because we treat it as a daycare center for criminals rather than, you know, <a href="https://www.joannejacobs.com/post/algebra-for-none-fails-in-san-francisco">a place of learning.</a> In the meantime, <a href="https://www.cnn.com/2023/04/16/us/dadeville-alabama-mass-shooting/index.html">this happened.</a> Ah, business as usual I said to myself and spent the rest of the day sleeping the sleep of the just. I will continue to write and call you all bastards until I die.
@@ -138,6 +178,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>12:53PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>It's All Just Kabuki</span>"###,
+      route: r###"/april/15/1253pm"###,
       paragraphs: r###"
         <p>
           {"Here's some links to websites I like that some people on IRC told me about today. I'll include more as I find them. Now listening to Macroblank. Now reading As the Caged Bird Sings."}
@@ -160,6 +201,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>8:59PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Little Druggy Dipshits Don't Get A Vote</span>"###,
+      route: r###"/april/14/859pm"###,
       paragraphs: r###"
       <p>
         I'm not my father. I'm me. And I'm angry.
@@ -195,6 +237,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>10:22PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>San Francisco Crime in The Tenderloin</span>"###,
+      route: r###"/april/13/1022pm"###,
       paragraphs: r###"
       <p>
         I wrote this piece in response to someone on Reddit and it was good enough that I'm cross posting it here.
@@ -245,6 +288,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>8:40PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>I Don't Even Have to Be Wrong - It's A Game-Changer!</span>"###,
+      route: r###"/april/12/840pm"###,
       paragraphs: r###"
       <p>
         Let me tell you a story. We could even call it an internet fairy tale. Here's the premise.
@@ -338,6 +382,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>11:59PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>I'm So Lucky!</span>"###,
+      route: r###"/april/11/1159pm"###,
       paragraphs: r###"
       <img loading="lazy" src="static/apr11/lucky.png" class="imagetag"/>
       <div>
@@ -365,6 +410,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>10:11AM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>JUMP, YOU FUCKERS!</span>"###,
+      route: r###"/april/10/1011am"###,
       paragraphs: r###"
       <img loading="lazy" src="static/apr10/jump.png" class="imagetag"/>
       <p>
@@ -438,6 +484,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>10:23AM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Killing Bob Lee, Maiming Don Carmignani</span>"###,
+      route: r###"/april/9/1023am"###,
       paragraphs: r###"
       <p>
         You like the title? I'm rather fond of it myself. If it bleeds it leads. If you listen just right you can hear the City by the Bay eating it's children and smell the cries of it's ineptitude. But I'm not a nose man or one of those big eared fellows. I'm the kind of guy that just looks and looks and can't help but see what you refuse to. This will be a picture essay with a large amount of small words so the kids in the back of the class can follow along.
@@ -503,6 +550,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>7:50AM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>So There Was This Guy...</span>"###,
+      route: r###"/april/8/750am"###,
       paragraphs: r###"
       <p>
         My father once told me this joke. An old man is in the hospital on life support and the weirdest thing keeps happening. He seems to be getting better, and without fail, every Friday his vitals drop. The doctors don't know what's going on - everyone is wondering what's happening. Finally, one of the relatives comes in on a Thursday night and she sees the janitor unplugging the life support machine so he has an outlet for the floor buffer.
@@ -590,6 +638,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>9:28PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>I had a Kitkat</span>"###,
+      route: r###"/april/7/928pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -615,6 +664,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>5:26PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Unplugging</span>"###,
+      route: r###"/april/7/526pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -631,6 +681,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>6:16PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Smell You Later</span>"###,
+      route: r###"/april/6/616pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -647,6 +698,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>8:22AM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>BLOCC MESSIAH</span>"###,
+      route: r###"/april/5/822am"###,
       paragraphs: r###"
       <div>
         <p>
@@ -699,6 +751,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>7:10PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Three Seashells</span>"###,
+      route: r###"/april/4/710pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -750,6 +803,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>2:33PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>All Your Map</span>"###,
+      route: r###"/april/3/233pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -766,6 +820,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>11:28PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>They'll Creep Up On Ya</span>"###,
+      route: r###"/april/2/1128pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -806,6 +861,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>11:03PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Burning Rope</span>"###,
+      route: r###"/april/2/1103pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -822,6 +878,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>5:01PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Burning Rope</span>"###,
+      route: r###"/april/2/501pm"###,
       paragraphs: r###"
       <p>
         So, the markets open - as they often do - on Monday morning. There's been a great deal of consternation over the current state of the banking industry - as if this current crisis were any sort of surprise. It's always when the *stock market* turns down that everyone starts paying attention to how shit the economy is. Gee I wonder why that is. Take a look at this - 
@@ -872,6 +929,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>1:11PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Modal Activate!</span>"###,
+      route: r###"/april/2/111pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -888,6 +946,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>1:05PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>A QUIET PEACEFUL DAY</span>"###,
+      route: r###"/april/1/105pm"###,
       paragraphs: r###"
       <div>
       <p>
@@ -904,6 +963,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>7:40PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Full Steam Ahead Boys!</span>"###,
+      route: r###"/march/31/740pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -927,6 +987,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>9:15PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Cascading Stylized Cadillacs</span>"###,
+      route: r###"/march/31/915pm"###,
       paragraphs: r###"
       <div>
         <p>
@@ -969,6 +1030,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>2:27PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>X-TRA!</span>"###,
+      route: r###"/march/30/227pm"###,
       paragraphs: r###"
       <p>
         THIS JUST IN - GOOGLE BING CHAT THINKS GAY PEOPLE ARE OBNOXIOUS*. *either that or rainbows.
@@ -984,6 +1046,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>11:20AM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Dog Fuckers At The Dildo Bazaar</span>"###,
+      route: r###"/march/30/1120am"###,
       paragraphs: r###"
       <p>
         So the dog fuckers in the shelter started speaking bullshit glossolalia about drugs and bullshit for an hour and then tried to light up meth. I told them to go fuck themselves and then they said 'OH MASSAH ME SO SAWWEE. I APPRECIATE YOU.' Shitbricks. So I decided to go around the ghetto this morning taking pictures of all the crazy shit that pisses me off and no one is fixing. There's a failure of the imagination in a writer who makes himself the story, but I don't care. So I'm not imaginative. I'm not that <a href="https://www.wired.com/story/brandon-sanderson-is-your-god/">dipshit with a sword</a>. I just have a keyboard a camera and a pair of brass balls. Let me show you something that will make you angry. Something that might make someone give a shit for 5 minutes.
@@ -1042,6 +1105,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>7:03PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Do My Ears Deceive Me</span>"###,
+      route: r###"/march/29/703pm"###,
       paragraphs: r###"
       <p>
         So the crazy people in the shelter are attempting to force me into religious conversion. What this person will do is they'll talk to themselves repeatedly while they play music and flood the shelter with drugs. I started recording after this dogfucker just repeated to himself 'you can be reborn. REBORN!'
@@ -1067,6 +1131,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>6:31PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>I Warm Comfortable Horse Fuck Against The Wall</span>"###,
+      route: r###"/march/29/631pm"###,
       paragraphs: r###"
       <p>
         Speaking of horse fuckers - just remember <a href="https://www.youtube.com/watch?v=7Pq-S557XQU&ab_channel=CGPGrey">Humans Need Not Apply</a> was written in 2015. It's not like we haven't seen the AI revolution writing on the wall for eight years and no one did a damn thing to make it so people could find stable long term employment that would pay the rent, let you put your kids through school, let alone have enough to eat or not be scared of your retirement plans being 'busking in the street' or 'winning the lottery'. You're welcome.
@@ -1081,6 +1146,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>5:39PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Your Pretty Is Pretty Ugly</span>"###,
+      route: r###"/march/29/539pm"###,
       paragraphs: r###"
       <p>
         I've added a picture that I put into Adobe Firefly - I put in the prompt 'The sky over the port was the color of a dead television'. That prompt has been put in so many times that it only came back with this kind of thing. Proving that once again, people have no fucking imagination although it is 'pretty'. If Case could see us now he'd cut his own dick off with a rust pair of pliers. I'll continue to add more to this website and call everyone on the planet a horsefucker.
@@ -1095,6 +1161,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>5:20PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>TESTIFY go fuck yourself</span>"###,
+      route: r###"/march/29/520pm"###,
       paragraphs: r###"
       <p>
         I have no money and I'm a homeless bum. I fucking hate the homeless, HOLY FUCKING SHIT DO I HATE THOSE FUCKERS. I'm going to spend the rest of my time developing this website. It's written in yew.rs, which means that I can be horribly inefficient. The downside is that I don't have the money to host a backend so I can't do much on the front. FUCK. In any case I'm going to make this the most rad kickass site I can given that I can't store anything in a database. Fuck you.

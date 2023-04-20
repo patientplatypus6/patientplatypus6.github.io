@@ -21,6 +21,8 @@ use yew_page::pages::books::religion::Religion;
 use yew_page::pages::books::horror::Horror;
 use yew_page::pages::books::scififantasy::Scififantasy;
 
+use yew_page::pages::blog::Blogpage;
+use yew_page::pages::xml::Xml;
 use yew_page::routes::routes::Route;
 
 use gloo_net::http::Request;
@@ -50,6 +52,11 @@ fn switch(routes: Route) -> Html {
                 < Home month={month}/> 
             }
         },
+        Route::Blogpage {month, day, time} => {
+            html! { 
+                < Blogpage month={month} day={day} time={time}/> 
+            }
+        },
         Route::Links => html! { < Links /> },
         Route::About => html! { < About /> },
         Route::Map => html! { < Map /> },
@@ -62,7 +69,8 @@ fn switch(routes: Route) -> Html {
         Route::Religion => html! { < Religion /> },
         Route::Horror => html! { < Horror /> },
         Route::Scififantasy => html! { < Scififantasy /> },
-        Route::Wall => html! { < Wall /> }
+        Route::Wall => html! { < Wall /> },
+        Route::Xml => html! { < Xml /> },
     }
 }
 

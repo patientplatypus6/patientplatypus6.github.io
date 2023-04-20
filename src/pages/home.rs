@@ -469,14 +469,21 @@ impl Component for Home {
 impl Home{
 
   fn blog_formatting(&self, ctx: &Context<Self>, blog: Blog) -> Html {
+    let s = blog.route.clone();
+    let mut parts = s.split("/");
+    let month = parts.nth(1).unwrap().to_string();
+    let day = parts.nth(0).unwrap().to_string();
+    let time = parts.nth(0).unwrap().to_string();
     html!{
       <>
-        <div class="timeheader">
-          { Html::from_html_unchecked(AttrValue::from(blog.date.clone()))} {" "}
-          { Html::from_html_unchecked(AttrValue::from(blog.time.clone()))} {" "}
-          { Html::from_html_unchecked(AttrValue::from(blog.location.clone()))}
-          {" - The Time Is Now"}
-        </div>
+        <Link<Route> to={Route::Blogpage{ month, day, time}}>
+          <div class="timeheader">
+            { Html::from_html_unchecked(AttrValue::from(blog.date.clone()))} {" "}
+            { Html::from_html_unchecked(AttrValue::from(blog.time.clone()))} {" "}
+            { Html::from_html_unchecked(AttrValue::from(blog.location.clone()))}
+            {" - The Time Is Now"}
+          </div>
+        </Link<Route>>
         <h3>
           { Html::from_html_unchecked(AttrValue::from(blog.title.clone()))}
         </h3>
