@@ -108,6 +108,21 @@ pub fn blogs() -> Vec<Blog> {
 
   returnblogs.push(
     Blog{
+      date: r###"<span>Thur Apr 20</span>"###,
+      time: r###"<span>11:28PM</span>"###,
+      location: r###"<span>San Francisco</span>"###,
+      title: r###"<span>XML Up - Sort of, Not Really</span>"###,
+      route: r###"/april/20/1128pm"###,
+      paragraphs: r###"
+        <p>
+          As it turns out I can't use XML on the site because...I can't wrote to https://patientplatypus6.github.io/xml directly on github pages, as /<ROUTE> doesn't work with their static site generator. I've cleaned up the blogs so each blog has it's own page and linked all the pages into an xml document for an rss feed - I just can't use it. Damn it. Anyway, it will be a function of the site I'll be able to use as soon as I have enough money to pay for a server. In the meantime, I'll spend the rest of the day working on the links. Ta!
+        </p>
+      "###.to_string()
+    }
+  );
+
+  returnblogs.push(
+    Blog{
       date: r###"<span>Wed Apr 19</span>"###,
       time: r###"<span>2:12PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
