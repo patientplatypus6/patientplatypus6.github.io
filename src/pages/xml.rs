@@ -39,14 +39,14 @@ use super::super::util::blogs;
 use super::super::util::blogs::Blog;
 
 // #[derive(Clone, PartialEq, Properties)]
-pub struct Xml{
+pub struct Xmlpage{
   pub location: String,
   pub searchterm: String,
   _listener: LocationHandle,
 }
 
 #[derive(Clone, PartialEq, Properties)]
-pub struct Blogpageprops{
+pub struct Xmlpageprops{
 }
 
 pub enum Msg {
@@ -54,9 +54,9 @@ pub enum Msg {
   PageUpdated(Location)
 }
 
-impl Component for Xml {
+impl Component for Xmlpage {
   type Message = Msg;
-  type Properties = Blogpageprops;
+  type Properties = Xmlpageprops;
 
   fn create(ctx: &Context<Self>) -> Self {
     log::info!("inside the create function for home; ");
@@ -390,11 +390,15 @@ impl Component for Xml {
   }
 }
 
-impl Xml{
+impl Xmlpage{
   fn display_xml(&self, ctx: &Context<Self>) -> Html {
     let blogs = blogs::blogs().clone();
     let xml = blogs::return_xml(&blogs);
-    html!{{xml.as_str()}}
+
+    html!{
+      { Html::from_html_unchecked(AttrValue::from(xml.clone())) }
+    }
+
   }
 }
 

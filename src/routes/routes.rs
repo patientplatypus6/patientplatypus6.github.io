@@ -5,7 +5,7 @@ pub enum Route {
     #[at("/")]
     Home,
     #[at("/xml")]
-    Xml,
+    Xmlpage,
     #[at("/:month")]
     HomeMonth{ month: String },
     #[at("/:month/:day/:time")]

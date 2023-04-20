@@ -61,7 +61,7 @@ pub fn find_substring(blog_vec: &Vec<Blog>, substring: &str) -> Vec<Blog>{
 }
 
 pub fn return_xml(blog_vec: &Vec<Blog>) -> String{
-  let mut xml = r###"<?xml version="1.0" encoding="UTF-8" ?>
+  let mut xml = r###"<xmp><?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
   <channel>"###.to_string();
 
@@ -74,7 +74,7 @@ pub fn return_xml(blog_vec: &Vec<Blog>) -> String{
     xml = xml + appendstring.as_str();
   }
 
-  xml = xml + r###"</channel></rss>"###;
+  xml = xml + r###"</channel></rss></xmp>"###;
   xml
 }
 

@@ -22,7 +22,7 @@ use yew_page::pages::books::horror::Horror;
 use yew_page::pages::books::scififantasy::Scififantasy;
 
 use yew_page::pages::blog::Blogpage;
-use yew_page::pages::xml::Xml;
+use yew_page::pages::xml::Xmlpage;
 use yew_page::routes::routes::Route;
 
 use gloo_net::http::Request;
@@ -70,7 +70,7 @@ fn switch(routes: Route) -> Html {
         Route::Horror => html! { < Horror /> },
         Route::Scififantasy => html! { < Scififantasy /> },
         Route::Wall => html! { < Wall /> },
-        Route::Xml => html! { < Xml /> },
+        Route::Xmlpage => html! { < Xmlpage /> },
     }
 }
 
