@@ -296,22 +296,21 @@ impl Component for Links {
 
               table, th {
                 border: 3px solid lightgreen;
-                width: calc(100%);
+                width: 100%;
                 background: rgba(0,200,0,0.2);
               }
 
               td{
                 padding: 5px;
+                overflow-wrap: break-word;
               }
 
               th{
-                max-width: calc(100%);
                 padding: 5px; 
                 background: rgba(0,0,200,0.2);
               }
 
               tr{ 
-                max-width: calc(100%);
                 padding: 5px;
                 background: rgba(0,200,0,0.2);
               }
@@ -328,7 +327,7 @@ impl Component for Links {
 
           <div class="contentcontainer">
             <Header/>
-            <div>
+            <div style="width: 100%;">
               <div class="timeheader">
                 {"Places to go, things to be"}
               </div>    
@@ -370,56 +369,57 @@ impl Links{
               </select>
             </span>
           </p>
-
         </div>
         // NOTE - the table is not completely responsive to changes in the width of the page
         // FIX LATER!
-        <table>
-        <th>
-          {"Category"}
-        </th>
-        <th>
-          {"Tagline"}
-        </th>
-        <th>
-          {"Notes"}
-        </th>
-        <th>
-          {"Link"}
-        </th>
-          {
-            for linksdisp.iter().enumerate().map(|(i, link)| {
-              log::info!("value of category: {:?}", link.clone().category.to_string());
-              log::info!("value of selected: {:?}", self.selected.to_string());
-              log::info!("value of equality: {:?}", link.clone().category.to_string() == self.selected.to_string());
-              log::info!("value of equality2: {:?}", (link.clone().category.to_string() == self.selected.to_string()) || (self.selected.to_string()!="Select an option".to_string()));
-              if (link.clone().category.to_string() == self.selected.to_string()) || (self.selected.to_string()=="Select an option".to_string()){
-                html!{
-                  <>
-                    <tr>
-                      <td>
-                        {link.clone().category}
-                      </td>
-                      <td>
-                        {link.clone().tagline}
-                      </td>
-                      <td>
-                        {link.clone().notes}
-                      </td>
-                      <td>
-                        <a href={link.clone().href}>{link.clone().href}</a>
-                      </td>
-                    </tr>
-                  </>
+        <div style="width: 60vw; background: orange;">
+          <table style="width: 100%;">
+          <th>
+            {"Category"}
+          </th>
+          <th>
+            {"Tagline"}
+          </th>
+          <th>
+            {"Notes"}
+          </th>
+          <th>
+            {"Link"}
+          </th>
+            {
+              for linksdisp.iter().enumerate().map(|(i, link)| {
+                log::info!("value of category: {:?}", link.clone().category.to_string());
+                log::info!("value of selected: {:?}", self.selected.to_string());
+                log::info!("value of equality: {:?}", link.clone().category.to_string() == self.selected.to_string());
+                log::info!("value of equality2: {:?}", (link.clone().category.to_string() == self.selected.to_string()) || (self.selected.to_string()!="Select an option".to_string()));
+                if (link.clone().category.to_string() == self.selected.to_string()) || (self.selected.to_string()=="Select an option".to_string()){
+                  html!{
+                    <>
+                      <tr>
+                        <td>
+                          {link.clone().category}
+                        </td>
+                        <td>
+                          {link.clone().tagline}
+                        </td>
+                        <td>
+                          {link.clone().notes}
+                        </td>
+                        <td>
+                          <a href={link.clone().href}>{link.clone().href}</a>
+                        </td>
+                      </tr>
+                    </>
+                  }
+                }else{
+                  html!{
+                    <div/>
+                  }
                 }
-              }else{
-                html!{
-                  <div/>
-                }
-              }
-            })
-          }
-        </table>
+              })
+            }
+          </table>
+        </div>
       </>
     }
   }
