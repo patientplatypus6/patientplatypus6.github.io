@@ -109,6 +109,21 @@ pub fn blogs() -> Vec<Blog> {
   returnblogs.push(
     Blog{
       date: r###"<span>Thur Apr 20</span>"###,
+      time: r###"<span>7:19PM</span>"###,
+      location: r###"<span>San Francisco</span>"###,
+      title: r###"<span>Lazy Today</span>"###,
+      route: r###"/april/20/1128pm"###,
+      paragraphs: r###"
+        <p>
+          I didn't feel like working on the site for the rest of the day and just read my book. Gravity's Rainbow. WWII on acid during 420 in San Francisco 2023. Inception in the Real.
+        </p>
+      "###.to_string()
+    }
+  );
+
+  returnblogs.push(
+    Blog{
+      date: r###"<span>Thur Apr 20</span>"###,
       time: r###"<span>11:28PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>XML Up - Sort of, Not Really</span>"###,

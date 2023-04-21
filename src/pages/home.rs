@@ -397,6 +397,7 @@ impl Component for Home {
                 if self.month.clone() == "/april".to_string(){
                   html!{
                     <>
+                      {self.apr20(ctx)}
                       {self.apr19(ctx)}
                       {self.apr18(ctx)}
                       {self.apr17(ctx)}
@@ -429,6 +430,7 @@ impl Component for Home {
                 }else{
                   html!{
                     <>
+                      {self.apr20(ctx)}
                       {self.apr19(ctx)}
                       {self.apr18(ctx)}
                       {self.apr17(ctx)}
@@ -512,6 +514,17 @@ impl Home{
     let blogs = blogs::blogs().clone();
     let blogindex = blogs::find_index_by_time_date(&blogs.clone(), time_to_find, date_to_find).unwrap();
     blogs[blogindex].clone()
+  }
+
+  fn apr20(&self, ctx: &Context<Self>) -> Html {
+    let blog = self.find_blog("<span>7:19PM</span>", "<span>Thur Apr 20</span>");
+    let blog2 = self.find_blog("<span>11:28PM</span>", "<span>Thur Apr 20</span>");
+    html!{
+      <>
+        {self.blog_formatting(ctx, blog.clone())}
+        {self.blog_formatting(ctx, blog2.clone())}
+      </>
+    }
   }
 
   fn apr19(&self, ctx: &Context<Self>) -> Html {
