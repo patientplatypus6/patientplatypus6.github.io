@@ -9,8 +9,18 @@ pub struct Link{
   pub notes: String
 }
 
+
 pub fn links() -> Vec<Link> {
   let mut returnlinks = vec![];
+
+  returnlinks.push(
+    Link{
+      category: r###"Github"###,
+      tagline: r###"My Github page"###,
+      href: r###"https://github.com/patientplatypus6/"###,
+      notes: r###"There's not much there, but the code for this site is free and open to the public"###.to_string()
+    }
+  );
   returnlinks.push(
     Link{
       category: r###"Music"###,
@@ -31,7 +41,7 @@ pub fn links() -> Vec<Link> {
     Link{
       category: r###"News"###,
       tagline: r###"YCombinator"###,
-      href: r###"https://ohadravid.github.io/posts/2023-03-rusty-python/"###,
+      href: r###"https://news.ycombinator.com"###,
       notes: r###"YCombinator - the most fake Fake News on the Internet"###.to_string()
     }
   );
@@ -39,7 +49,7 @@ pub fn links() -> Vec<Link> {
     Link{
       category: r###"Blog"###,
       tagline: r###"Some Programmer Dude"###,
-      href: r###"https://news.ycombinator.com"###,
+      href: r###"https://ohadravid.github.io/posts/2023-03-rusty-python/"###,
       notes: r###"Optimizing Python With Rust"###.to_string()
     }
   );

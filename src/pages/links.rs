@@ -21,6 +21,7 @@ use yew_canvas::Canvas;
 
 use crate::routes::routes::Route;
 use yew_router::prelude::*;
+// use yew::html::ChangeData;
 
 use super::super::components::flashlinks::Flashlinks;
 use super::super::components::header::Header;
@@ -30,11 +31,12 @@ use super::super::util::links;
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct Links{
-
+  pub selected: String
 }
 
 pub enum Msg {
-  SearchHandler(String)
+  SearchHandler(String),
+  LinkFilter(Event)
 }
 
 impl Component for Links {
@@ -44,7 +46,7 @@ impl Component for Links {
 
   fn create(ctx: &Context<Self>) -> Self {
     Self { 
-
+      selected: "Select an option".to_string()
     }
   }
 
@@ -56,6 +58,14 @@ impl Component for Links {
     match msg{
       Msg::SearchHandler(e)=>{
         log::info!("Inside SearchTerm in home and value; {:?}", e);
+      }, 
+      Msg::LinkFilter(e)=>{
+        let target = e.target();
+        if let Some(select_element) = target.and_then(|t| t.dyn_into::<web_sys::HtmlSelectElement>().ok()) {
+          let value = select_element.value();
+          self.selected = value;
+          log::info!("value of selected: {:?}", self.selected);
+        }
       }, 
     }
     true
@@ -286,6 +296,7 @@ impl Component for Links {
 
               table, th {
                 border: 3px solid lightgreen;
+                width: calc(100%);
                 background: rgba(0,200,0,0.2);
               }
 
@@ -294,11 +305,13 @@ impl Component for Links {
               }
 
               th{
+                max-width: calc(100%);
                 padding: 5px; 
                 background: rgba(0,0,200,0.2);
               }
 
               tr{ 
+                max-width: calc(100%);
                 padding: 5px;
                 background: rgba(0,200,0,0.2);
               }
@@ -321,7 +334,7 @@ impl Component for Links {
               </div>    
               <div>
                 <p>
-                  {"Here's a shit unordered list of the links I've used so far. I'll unfuck this later. Enjoy!"}
+                  {"Here are some links that don't suck."}
                 </p>
               </div>
               {self.linklist(ctx)}
@@ -335,9 +348,32 @@ impl Component for Links {
 
 impl Links{
   fn linklist(&self, ctx: &Context<Self>) -> Html {
-    let linksdisp = links::links().clone();
+    let linksdisp = links::links().clone();        
+    let optionsvec = vec!["Github", "Music", "Funny", "Blog", "Article", "Law", "Video"];
     html!{
       <>
+        <div>
+          <p>
+            {"Filter by category "}
+            <span>
+              <select name="status"
+                onchange={ctx.link().callback(move |e| Msg::LinkFilter(e))}
+              >
+                <option selected=true value="Select an option">{"Select an option"}</option>
+                {
+                  for optionsvec.iter().enumerate().map(|(i, opt)| {
+                    html!{
+                      <option value={opt.clone().to_string()}>{ opt.clone().to_string() }</option>
+                    }
+                  })
+                }
+              </select>
+            </span>
+          </p>
+
+        </div>
+        // NOTE - the table is not completely responsive to changes in the width of the page
+        // FIX LATER!
         <table>
         <th>
           {"Category"}
@@ -353,23 +389,33 @@ impl Links{
         </th>
           {
             for linksdisp.iter().enumerate().map(|(i, link)| {
-              html!{
-                <>
-                  <tr>
-                    <td>
-                      {link.clone().category}
-                    </td>
-                    <td>
-                      {link.clone().tagline}
-                    </td>
-                    <td>
-                      {link.clone().notes}
-                    </td>
-                    <td>
-                      <a href={link.clone().href}>{link.clone().href}</a>
-                    </td>
-                  </tr>
-                </>
+              log::info!("value of category: {:?}", link.clone().category.to_string());
+              log::info!("value of selected: {:?}", self.selected.to_string());
+              log::info!("value of equality: {:?}", link.clone().category.to_string() == self.selected.to_string());
+              log::info!("value of equality2: {:?}", (link.clone().category.to_string() == self.selected.to_string()) || (self.selected.to_string()!="Select an option".to_string()));
+              if (link.clone().category.to_string() == self.selected.to_string()) || (self.selected.to_string()=="Select an option".to_string()){
+                html!{
+                  <>
+                    <tr>
+                      <td>
+                        {link.clone().category}
+                      </td>
+                      <td>
+                        {link.clone().tagline}
+                      </td>
+                      <td>
+                        {link.clone().notes}
+                      </td>
+                      <td>
+                        <a href={link.clone().href}>{link.clone().href}</a>
+                      </td>
+                    </tr>
+                  </>
+                }
+              }else{
+                html!{
+                  <div/>
+                }
               }
             })
           }

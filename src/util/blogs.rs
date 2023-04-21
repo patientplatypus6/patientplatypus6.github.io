@@ -108,6 +108,55 @@ pub fn blogs() -> Vec<Blog> {
 
   returnblogs.push(
     Blog{
+      date: r###"<span>Fri Apr 21</span>"###,
+      time: r###"<span>10:33AM</span>"###,
+      location: r###"<span>San Francisco</span>"###,
+      title: r###"<span>Deep Thoughts</span>"###,
+      route: r###"/april/20/1128pm"###,
+      paragraphs: r###"
+        <p>
+          I've been thinking lately, a dangerous preoccupation in some quarters, most especially among those who are out hustling for a little of that hope and change. I've written a bit of a LinkedIn screed - that and a handjob'll get you a bottle of gutrot. Here's a picture. I'll not bother to type it out as it wouldn't be worth the effort and I don't want it to be indexable. Not because I'm wrong, but it's a waste of my sword, fighting someone else's battle when they won't even fight for themselves.
+        </p>
+        <p>
+          Here's a picture for those visual sorts that can walk down the street without sunglasses but are still too stupid to read. Right up there with people who can read Kierkegaard but who's personality is still emblazoned on a t-shirt.
+        </p>
+        <img loading="lazy" src="static/apr21/pic1.png" class="imagetag" />
+        <p>
+          On the technical front I've sorted out the links and made them indexable with a sort mechanism. The links table still needs to be made responsive, but it's good enough for the moment, so I put a note in the code and I'm moving on.
+        </p>
+        <p>
+          I'm thinking that I might want to make a comment wall using Google sheets as a backend, but I don't have enough readers yet to make the ability to write SUCK A DICK in Calibri 18 bolded and underlined worthwhile yet. As far as doing anything that would require me to log in - meh. I could set up a system where I could write a blog post from some other computer if I logged into an admin panel, but for the moment I don't have a need. Other things that I could do include adding a world map and then add geo location dots, but there's a limit of 100 people per month on freegeoip.net. Either I have less people than that visit my site or I have to pay more money than it's worth. Does anyone care about the people coming to my site or not. 
+        </p>
+        <p>
+          NOTE TO SELF - purchase brick to brain the crazy old Chinese woman going Ahem Ahem Ahem in the library. How much does a brick cost? Hmm...now I'm thinking of brick costs. Damn crazy old Chinese bats.
+        </p>
+        <p>
+          Some children have thrown a protest again today. I believe they are, in fact, children this time and not full grown adults. Lots of pretty banners and nothing to do to fix any problems. About the same as always. Their parents were all high yesterday, so tree meet apple. 
+        </p>
+        <p>
+          Seeing as I have no idea what to write about that people would care enough to read, or write down so people I care about would want to read it, I'll spend the rest of the day reading. It's fascinating, people only spend the time to read if they need the adulation from strangers they've never met - it's the entire purpose of creation is to show to the world that you are more worthy of praise than those around you. And so we spend our time being entertained by people who are so profoundly and unsettlingly non-egotistical as to make works of art to prove they exist and it's the belly scratchers and ass pickers that we look down upon. What would I write that would make anyone care? Who would read it whose opinions were worth modulating? Certainly not the crazy old chinese bat with a brain infection. Not people protesting in the street. Not my parents, family, friends - I have none of those. Who then? No one is paying me to write this.
+        </p>
+        <p>
+          Patrick Murphy, a roommate in college who when I went hat in hand asking for shelter paid for dinner and then said too bad and currently is a senior manager at Microsoft, once made a program that was an ascii game of some sort. Every hour the game gave you some amount of mana that you could spend fighting other players online. I don't know. Point is, that game is worth more and is better programmed than I could ever manage even though he's a low down son of a bitch. Which may be why he's such a good programmer - he thought he had something to prove. It's the bastards that run the world just to prove they could while the rest of us schmucks are just along for the ride.
+        </p>
+        <p>
+          You know that skull that I have on the top of my blog? That came from a japanese wallet dongle (I have no idea what you would call it and can't be assed to look it up) that someone carved from ebony that's survived for 500 years buried in the muck where some nameless Samurai bought it between the ribs and the guy who carved long ago succumbed to Poor Peasant disease. The names to both of these people are completely lost to time. And so I took a picture of it, diddled around with it in GIMP (which is Photoshop for those too poor to pay for anything), and presto. I now have a skull that is way more rad than anyone living could produce on their own.
+        </p>
+        <p>
+          And both of those guys, who either had something to prove so they could get laid or had the money to eat or get laid, are way cooler than I'll ever be. One an artist of way more skill than I'll have in a million years, and another some guy that had a fucking ebony skull hooked to his kimono so he had somewhere to hang his wallet. I have the feeling that because people weren't so interested in scale, in the industrialization of everything, they spent more time on art. If you can't photocopy a picture of a skull a billion times you spend more time on making the skull than the photocopier. They also had a life expectancy of thirty and occasionally got the wakazashi through a windpipe, but those are professional hazards of being a fucking ninja. What I'm saying here is that something is lost when we can all have our Chevy Tahoe driverless air conditioned thirty minutes or less cell phones to our ears (and why in the everloving fuck do people hold it horizontally as if their trying to shove the damn thing in their ear canal is beyond me), but we don't have as much cool art anymore.
+        </p>
+        <p>
+          One of those Kierkegaardian dialectical door number one is a shit parade and door number two is the ghost of the 60s trying to fuck a goat on acid. Makes one want to start mailing out manifestos from an artisenal cottage in the woods with a picture of Freud licking a doorknob entitled Industrialization and It's Discontents. Shoebox showmanship perhaps, but such explosive grandeur at least has some my sympathies.
+        </p>
+        <p>
+          Signing off from the dark side of your deepest regrets. Just remember kids, it's a phone not a tic tac, it's only a UFO until it hit's you in the face and then it's a baseball, and the mailman is only humping your leg because your dog is cheating on you. Toodaloo.
+        </p>
+      "###.to_string()
+    }
+  );
+
+  returnblogs.push(
+    Blog{
       date: r###"<span>Thur Apr 20</span>"###,
       time: r###"<span>7:19PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
