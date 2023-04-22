@@ -519,10 +519,12 @@ impl Home{
   }
 
   fn apr21(&self, ctx: &Context<Self>) -> Html {
-    let blog = self.find_blog("<span>10:33AM</span>", "<span>Fri Apr 21</span>");
+    let blog = self.find_blog("<span>5:52PM</span>", "<span>Fri Apr 21</span>");
+    let blog2 = self.find_blog("<span>10:33AM</span>", "<span>Fri Apr 21</span>");
     html!{
       <>
-        {self.blog_formatting(ctx, blog.clone())}
+        {self.blog_formatting(ctx, blog.clone())}      
+        {self.blog_formatting(ctx, blog2.clone())}
       </>
     }
   }

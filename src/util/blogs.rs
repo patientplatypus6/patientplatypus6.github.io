@@ -109,10 +109,26 @@ pub fn blogs() -> Vec<Blog> {
   returnblogs.push(
     Blog{
       date: r###"<span>Fri Apr 21</span>"###,
+      time: r###"<span>5:52PM</span>"###,
+      location: r###"<span>San Francisco</span>"###,
+      title: r###"<span>Clown Show</span>"###,
+      route: r###"/april/21/552pm"###,
+      paragraphs: r###"
+        <p>
+          I went to 123 10th street and offered to build them a python app for free so they could check if people qualified for housing before putting them in a system that rejects them for six months. As I suspected they turned me down, acted nervous, and started referring me to a bunch of black boxes to stick my opinions in. Cocksuckers are just "rejecting" people if they don't get a kickback. It's a bureacratic make work scheme and a means of generating graft. Sell drugs for six months and if you save enough money we'll give you an SRO! What moral midgets. What ignoramuses. What a fucking clown show.
+        </p>
+      "###.to_string()
+    }
+  );
+
+
+  returnblogs.push(
+    Blog{
+      date: r###"<span>Fri Apr 21</span>"###,
       time: r###"<span>10:33AM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Deep Thoughts</span>"###,
-      route: r###"/april/20/1128pm"###,
+      route: r###"/april/21/1033am"###,
       paragraphs: r###"
         <p>
           I've been thinking lately, a dangerous preoccupation in some quarters, most especially among those who are out hustling for a little of that hope and change. I've written a bit of a LinkedIn screed - that and a handjob'll get you a bottle of gutrot. Here's a picture. I'll not bother to type it out as it wouldn't be worth the effort and I don't want it to be indexable. Not because I'm wrong, but it's a waste of my sword, fighting someone else's battle when they won't even fight for themselves.
@@ -161,7 +177,7 @@ pub fn blogs() -> Vec<Blog> {
       time: r###"<span>7:19PM</span>"###,
       location: r###"<span>San Francisco</span>"###,
       title: r###"<span>Lazy Today</span>"###,
-      route: r###"/april/20/1128pm"###,
+      route: r###"/april/20/719pm"###,
       paragraphs: r###"
         <p>
           I didn't feel like working on the site for the rest of the day and just read my book. Gravity's Rainbow. WWII on acid during 420 in San Francisco 2023. Inception in the Real.
